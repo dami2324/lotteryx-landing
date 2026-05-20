@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lotteryx.digitalboxstore.site/sitemap.xml
