@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es-PA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5TGWZQXV');</script>
+  <!-- End Google Tag Manager -->
+
+  <title>Contacto de Soporte | LotteryX Panamá</title>
+  <meta name="description" content="Ponte en contacto con el equipo de soporte técnico y de atención al usuario de LotteryX Panamá. Estamos aquí para resolver tus dudas.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://lotteryx.digitalboxstore.site/contacto.html">
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-base: #050505;
+      --bg-gradient: radial-gradient(circle at 50% -20%, #1f2937, #000000 70%);
+      --glass-bg: rgba(255, 255, 255, 0.03);
+      --glass-border: rgba(255, 255, 255, 0.08);
+      --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --primary: #10b981;
+      --primary-glow: rgba(16, 185, 129, 0.2);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg-base);
+      background-image: var(--bg-gradient);
+      background-attachment: fixed;
+      color: var(--text-main);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+
+    .landing-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(5, 5, 5, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--glass-border);
+      padding: 20px 0;
+      width: 100%;
+    }
+
+    .landing-header-container {
+      width: min(1200px, 90%);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .landing-logo {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: var(--text-main);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .landing-logo span {
+      color: var(--primary);
+    }
+
+    .landing-nav-links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .landing-nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .landing-nav-links a:hover {
+      color: var(--text-main);
+    }
+
+    .btn-nav-cta {
+      background: var(--primary);
+      color: #000 !important;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .btn-nav-cta:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    /* Contenedor de Contacto */
+    .contact-container {
+      width: min(650px, 90%);
+      margin: 80px auto;
+      padding: 0 15px;
+      text-align: center;
+    }
+
+    .contact-container h1 {
+      font-size: clamp(28px, 4.5vw, 40px);
+      font-weight: 800;
+      margin-bottom: 16px;
+      background: linear-gradient(180deg, #ffffff 0%, #a3a3a3 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .contact-subtitle {
+      color: var(--text-muted);
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+
+    .contact-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--glass-border);
+      border-radius: 24px;
+      padding: 40px 30px;
+      box-shadow: var(--glass-shadow);
+      text-align: center;
+    }
+
+    .contact-icon {
+      font-size: 40px;
+      color: var(--primary);
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+
+    .contact-card h2 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .contact-card p {
+      color: var(--text-muted);
+      font-size: 15px;
+      margin-bottom: 30px;
+    }
+
+    .contact-email-btn {
+      display: inline-block;
+      background: var(--primary);
+      color: #000;
+      padding: 16px 36px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 16px;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2);
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .contact-email-btn:hover {
+      opacity: 0.95;
+      transform: translateY(-1px);
+    }
+
+    .contact-note {
+      margin-top: 30px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* Footer */
+    .landing-footer {
+      border-top: 1px solid var(--glass-border);
+      padding: 60px 0;
+      margin-top: 100px;
+    }
+
+    .landing-footer-container {
+      width: min(650px, 90%);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 32px;
+      color: var(--text-muted);
+      font-size: 15px;
+    }
+
+    .landing-footer-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .landing-footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .landing-footer-links a:hover {
+      color: var(--text-main);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5TGWZQXV"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Header -->
+  <header class="landing-header">
+    <div class="landing-header-container">
+      <a href="https://lotteryx.digitalboxstore.site/" class="landing-logo">Lottery<span>X</span></a>
+      <nav class="landing-nav-links">
+        <a href="https://lotteryx.digitalboxstore.site/">Inicio</a>
+        <a href="https://app.digitalboxstore.site/" class="btn-nav-cta" rel="nofollow">Acceder a la App</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenedor principal de Contacto -->
+  <main class="contact-container">
+    <h1>Contacto de Soporte</h1>
+    <p class="contact-subtitle">¿Tienes alguna pregunta, sugerencia o problema técnico? Estamos aquí para ayudarte.</p>
+
+    <div class="contact-card">
+      <div class="contact-icon">✉</div>
+      <h2>Escríbenos por Correo Electrónico</h2>
+      <p>Nuestro equipo de soporte técnico responde típicamente en menos de 24 horas hábiles.</p>
+      
+      <a href="mailto:soporte@digitalboxstore.site?subject=Soporte%20LotteryX" class="contact-email-btn">
+        soporte@digitalboxstore.site
+      </a>
+      
+      <p class="contact-note">Haz clic arriba para abrir tu cliente de correo predeterminado.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="landing-footer">
+    <div class="landing-footer-container">
+      <p>&copy; 2026 LotteryX Panamá. Todos los derechos reservados.</p>
+      <div class="landing-footer-links">
+        <a href="https://lotteryx.digitalboxstore.site/">Inicio</a>
+        <a href="https://lotteryx.digitalboxstore.site/terminos.html">Términos de Uso</a>
+        <a href="https://lotteryx.digitalboxstore.site/privacidad.html">Privacidad</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
