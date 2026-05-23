@@ -10,22 +10,22 @@
   <!-- End Google Tag Manager -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <!-- SEO BÁSICO Y POSICIONAMIENTO EN GOOGLE PANAMÁ -->
   <title>LotteryX | Pronósticos y Análisis de la Lotería de Panamá</title>
   <meta name="description" content="El algoritmo inteligente para ganar la Lotería de Panamá. Generador de números para el Sorteo Miercolito y Dominical basado en estadísticas de brincos de la LNB.">
   <meta name="keywords" content="loteria panama, resultados loteria panama, piramide de la loteria, pronosticos loteria panama, numeros ganadores lnb, sorteo miercolito, sorteo dominical, numeros para jugar loteria panama">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://lotteryx.digitalboxstore.site/">
-  
-  <!-- OPEN GRAPH (Para compartir en WhatsApp, Facebook, etc. con excelente aspecto visual) -->
+
+  <!-- OPEN GRAPH -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="LotteryX | Inteligencia Artificial para la Lotería de Panamá">
   <meta property="og:description" content="Accede gratis al Top 10 de números sugeridos con mayor fuerza matemática para el próximo sorteo de la Lotería Nacional.">
   <meta property="og:url" content="https://lotteryx.digitalboxstore.site/">
   <meta property="og:image" content="https://lotteryx.digitalboxstore.site/og-image.png">
   <meta property="og:locale" content="es_PA">
-  
+
   <!-- TWITTER CARDS -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="LotteryX | Algoritmo Estadístico LNB Panamá">
@@ -35,8 +35,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- JSON-LD SCHEMA MARKUP (Para que Google entienda que es una herramienta web y la muestre con prioridad en los resultados) -->
+
+  <!-- JSON-LD SCHEMA MARKUP -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -73,12 +73,7 @@
       --accent: #6366f1;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
 
     body {
       background: var(--bg-base);
@@ -91,6 +86,7 @@
       line-height: 1.5;
     }
 
+    /* ===== HEADER ===== */
     .landing-header {
       position: sticky;
       top: 0;
@@ -120,11 +116,11 @@
       display: flex;
       align-items: center;
       gap: 2px;
+      z-index: 200;
+      position: relative;
     }
 
-    .landing-logo span {
-      color: var(--primary);
-    }
+    .landing-logo span { color: var(--primary); }
 
     .landing-nav-links {
       display: flex;
@@ -140,9 +136,7 @@
       transition: color 0.2s ease;
     }
 
-    .landing-nav-links a:hover {
-      color: var(--text-main);
-    }
+    .landing-nav-links a:hover { color: var(--text-main); }
 
     .btn-nav-cta {
       background: var(--primary);
@@ -153,11 +147,35 @@
       transition: transform 0.2s ease, opacity 0.2s ease;
     }
 
-    .btn-nav-cta:hover {
-      opacity: 0.9;
-      transform: translateY(-1px);
+    .btn-nav-cta:hover { opacity: 0.9; transform: translateY(-1px); }
+
+    /* ===== HAMBURGER ===== */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 6px;
+      z-index: 200;
+      position: relative;
     }
 
+    .hamburger span {
+      display: block;
+      width: 26px;
+      height: 2px;
+      background: var(--text-main);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ===== MAIN CONTAINER ===== */
     .landing-container {
       width: min(1000px, 90%);
       margin: 0 auto;
@@ -167,7 +185,7 @@
       gap: 120px;
     }
 
-    /* Hero Section */
+    /* ===== HERO ===== */
     .landing-hero {
       text-align: center;
       display: flex;
@@ -224,10 +242,7 @@
       transition: transform 0.2s ease, opacity 0.2s ease;
     }
 
-    .btn-primary-lg:hover {
-      opacity: 0.95;
-      transform: translateY(-2px);
-    }
+    .btn-primary-lg:hover { opacity: 0.95; transform: translateY(-2px); }
 
     .btn-secondary-lg {
       background: transparent;
@@ -241,10 +256,7 @@
       transition: background 0.2s ease, transform 0.2s ease;
     }
 
-    .btn-secondary-lg:hover {
-      background: rgba(255, 255, 255, 0.03);
-      transform: translateY(-2px);
-    }
+    .btn-secondary-lg:hover { background: rgba(255, 255, 255, 0.03); transform: translateY(-2px); }
 
     .glass-panel {
       background: var(--glass-bg);
@@ -279,49 +291,26 @@
       line-height: 1.6;
     }
 
-    /* Steps */
+    /* ===== STEPS ===== */
     .steps-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 40px;
     }
 
-    .step-card {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
+    .step-card { position: relative; display: flex; flex-direction: column; gap: 20px; }
+    .step-number { font-size: 56px; font-weight: 800; color: rgba(16, 185, 129, 0.15); line-height: 1; }
+    .step-card h3 { font-size: 22px; font-weight: 600; }
+    .step-card p { color: var(--text-muted); line-height: 1.6; font-size: 16px; }
 
-    .step-number {
-      font-size: 56px;
-      font-weight: 800;
-      color: rgba(16, 185, 129, 0.15);
-      line-height: 1;
-    }
-
-    .step-card h3 {
-      font-size: 22px;
-      font-weight: 600;
-    }
-
-    .step-card p {
-      color: var(--text-muted);
-      line-height: 1.6;
-      font-size: 16px;
-    }
-
-    /* Features Grid */
+    /* ===== FEATURES ===== */
     .features-grid-landing {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 32px;
     }
 
-    .feature-landing-card {
-      display: flex;
-      gap: 24px;
-    }
+    .feature-landing-card { display: flex; gap: 24px; }
 
     .feature-icon-wrapper {
       background: rgba(16, 185, 129, 0.05);
@@ -336,19 +325,10 @@
       flex-shrink: 0;
     }
 
-    .feature-landing-info h3 {
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
+    .feature-landing-info h3 { font-size: 20px; font-weight: 600; margin-bottom: 10px; }
+    .feature-landing-info p { color: var(--text-muted); font-size: 15px; line-height: 1.6; }
 
-    .feature-landing-info p {
-      color: var(--text-muted);
-      font-size: 15px;
-      line-height: 1.6;
-    }
-
-    /* CTA Section */
+    /* ===== CTA ===== */
     .landing-cta-section {
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
@@ -357,11 +337,7 @@
       background: radial-gradient(circle at 100% 100%, rgba(16, 185, 129, 0.05) 0%, transparent 60%);
     }
 
-    .landing-cta-text {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
+    .landing-cta-text { display: flex; flex-direction: column; gap: 24px; }
 
     .landing-cta-text h2 {
       font-size: clamp(32px, 5vw, 44px);
@@ -369,35 +345,14 @@
       line-height: 1.15;
     }
 
-    .landing-cta-text p {
-      color: var(--text-muted);
-      font-size: 17px;
-      line-height: 1.6;
-    }
+    .landing-cta-text p { color: var(--text-muted); font-size: 17px; line-height: 1.6; }
 
-    .landing-cta-benefits {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
+    .landing-cta-benefits { display: flex; flex-direction: column; gap: 16px; }
 
-    .cta-benefit-item {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 15px;
-    }
+    .cta-benefit-item { display: flex; align-items: center; gap: 12px; font-size: 15px; }
+    .cta-benefit-item svg { color: var(--primary); flex-shrink: 0; }
 
-    .cta-benefit-item svg {
-      color: var(--primary);
-      flex-shrink: 0;
-    }
-
-    .cta-button-container {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-    }
+    .cta-button-container { display: flex; justify-content: center; width: 100%; }
 
     .btn-cta-main {
       display: inline-block;
@@ -414,55 +369,19 @@
       transition: transform 0.2s ease, opacity 0.2s ease;
     }
 
-    .btn-cta-main:hover {
-      opacity: 0.95;
-      transform: translateY(-2px);
-    }
+    .btn-cta-main:hover { opacity: 0.95; transform: translateY(-2px); }
 
-    .cta-pricing-info {
-      text-align: center;
-      margin-top: 16px;
-      font-size: 14px;
-      color: var(--text-muted);
-    }
+    .cta-pricing-info { text-align: center; margin-top: 16px; font-size: 14px; color: var(--text-muted); }
+    .cta-pricing-info strong { color: var(--primary); }
 
-    .cta-pricing-info strong {
-      color: var(--primary);
-    }
+    /* ===== FAQ ===== */
+    .faq-grid { display: flex; flex-direction: column; gap: 32px; max-width: 800px; margin: 0 auto; width: 100%; }
+    .faq-item { border-bottom: 1px solid var(--glass-border); padding-bottom: 32px; }
+    .faq-item h3 { font-size: 20px; font-weight: 600; margin-bottom: 14px; }
+    .faq-item p { color: var(--text-muted); font-size: 16px; line-height: 1.6; }
 
-    /* FAQ section */
-    .faq-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 32px;
-      max-width: 800px;
-      margin: 0 auto;
-      width: 100%;
-    }
-
-    .faq-item {
-      border-bottom: 1px solid var(--glass-border);
-      padding-bottom: 32px;
-    }
-
-    .faq-item h3 {
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 14px;
-    }
-
-    .faq-item p {
-      color: var(--text-muted);
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
-    /* Landing footer */
-    .landing-footer {
-      border-top: 1px solid var(--glass-border);
-      padding: 60px 0;
-      margin-top: 80px;
-    }
+    /* ===== FOOTER ===== */
+    .landing-footer { border-top: 1px solid var(--glass-border); padding: 60px 0; margin-top: 80px; }
 
     .landing-footer-container {
       width: min(1000px, 90%);
@@ -476,47 +395,59 @@
       font-size: 15px;
     }
 
-    .landing-footer-links {
-      display: flex;
-      gap: 24px;
-    }
+    .landing-footer-links { display: flex; gap: 24px; }
+    .landing-footer-links a { color: var(--text-muted); text-decoration: none; transition: color 0.2s ease; }
+    .landing-footer-links a:hover { color: var(--text-main); }
 
-    .landing-footer-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
-
-    .landing-footer-links a:hover {
-      color: var(--text-main);
-    }
-
-    /* Responsive Landing Page */
+    /* ===== RESPONSIVE ===== */
     @media (max-width: 900px) {
-      .landing-cta-section {
-        grid-template-columns: 1fr;
-        gap: 48px;
-        padding: 40px;
-      }
+      .landing-cta-section { grid-template-columns: 1fr; gap: 48px; padding: 40px; }
     }
 
     @media (max-width: 768px) {
-      .landing-container {
-        padding: 60px 0;
-        gap: 80px;
-      }
-      .steps-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-      .features-grid-landing {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-      .landing-header-container {
+      /* Show hamburger, hide nav */
+      .hamburger { display: flex; }
+
+      .landing-nav-links {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(5, 5, 5, 0.97);
+        backdrop-filter: blur(20px);
         flex-direction: column;
-        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        gap: 36px;
+        z-index: 150;
       }
+
+      .landing-nav-links.open { display: flex; }
+
+      .landing-nav-links a {
+        font-size: 22px;
+        font-weight: 600;
+        color: var(--text-main);
+      }
+
+      .btn-nav-cta {
+        font-size: 18px !important;
+        padding: 14px 36px !important;
+        border-radius: 14px;
+      }
+
+      /* Content */
+      .landing-container { padding: 60px 0; gap: 80px; }
+      .steps-grid { grid-template-columns: 1fr; gap: 40px; }
+      .features-grid-landing { grid-template-columns: 1fr; gap: 32px; }
+
+      .landing-hero-actions { flex-direction: column; width: 100%; }
+      .btn-primary-lg, .btn-secondary-lg { width: 100%; text-align: center; padding: 16px 24px; }
+
+      .landing-footer-container { flex-direction: column; text-align: center; }
+      .landing-footer-links { flex-wrap: wrap; justify-content: center; }
     }
   </style>
 </head>
@@ -526,23 +457,25 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <!-- Header de la Landing Page -->
   <header class="landing-header">
     <div class="landing-header-container">
       <a href="#" class="landing-logo">Lottery<span>X</span></a>
-      <nav class="landing-nav-links">
-        <a href="#how-it-works">Cómo Funciona</a>
-        <a href="#features">Beneficios de Análisis</a>
-        <a href="#faq">Preguntas Frecuentes</a>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="landing-nav-links" id="nav-menu">
+        <a href="#how-it-works" class="nav-link">Cómo Funciona</a>
+        <a href="#features" class="nav-link">Beneficios de Análisis</a>
+        <a href="#faq" class="nav-link">Preguntas Frecuentes</a>
+        <a href="/blog/" class="nav-link">Blog</a>
         <a href="https://app.digitalboxstore.site/" class="btn-nav-cta" rel="nofollow">Acceder a la App</a>
       </nav>
     </div>
   </header>
 
-  <!-- Contenedor Principal con Palabras Clave de Lotería de Panamá -->
   <div class="landing-container">
-    
-    <!-- Hero Section optimizada para búsquedas en Panamá -->
+
+    <!-- Hero Section -->
     <section class="landing-hero">
       <span class="landing-badge">Pronósticos Estadísticos LNB Panamá</span>
       <h1>El Algoritmo Avanzado para ganar la Lotería de Panamá</h1>
@@ -555,7 +488,7 @@
       </div>
     </section>
 
-    <!-- Sección de Pasos -->
+    <!-- Cómo Funciona -->
     <section id="how-it-works">
       <div class="landing-section-title">
         <h2>Cómo obtener tus números de lotería en 3 pasos</h2>
@@ -580,7 +513,7 @@
       </div>
     </section>
 
-    <!-- Características del Generador de Lotería -->
+    <!-- Características -->
     <section id="features">
       <div class="landing-section-title">
         <h2>Analizador de Resultados LNB Panamá</h2>
@@ -626,13 +559,11 @@
       </div>
     </section>
 
-    <!-- Sección de Llamado a la Acción (CTA) para Registro en Vercel App -->
+    <!-- CTA Section -->
     <section id="join-section" class="landing-cta-section glass-panel">
       <div class="landing-cta-text">
         <h2>Únete Gratis a la Comunidad de LotteryX</h2>
-        <p>
-          Crea tu cuenta hoy sin pagar nada y consulta el listado con los mejores números de lotería de Panamá analizados por nuestra IA.
-        </p>
+        <p>Crea tu cuenta hoy sin pagar nada y consulta el listado con los mejores números de lotería de Panamá analizados por nuestra IA.</p>
         <div class="landing-cta-benefits">
           <div class="cta-benefit-item">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -648,7 +579,6 @@
           </div>
         </div>
       </div>
-      
       <div>
         <div class="cta-button-container">
           <a href="https://app.digitalboxstore.site/" class="btn-cta-main">Crear Cuenta e Iniciar Sesión</a>
@@ -657,7 +587,7 @@
       </div>
     </section>
 
-    <!-- Preguntas Frecuentes optimizadas para búsquedas comunes en Panamá -->
+    <!-- FAQ -->
     <section id="faq">
       <div class="landing-section-title">
         <h2>Preguntas Frecuentes sobre la Lotería de Panamá</h2>
@@ -666,34 +596,26 @@
       <div class="faq-grid">
         <div class="faq-item">
           <h3>¿Cómo funciona la predicción de LotteryX?</h3>
-          <p>
-            Analizamos la base de datos de los sorteos jugados de la Lotería Nacional de Beneficencia de Panamá. El sistema busca terminaciones que han salido en el segundo o tercer premio y mide, estadísticamente, la rapidez con la que brincan al primer premio en sorteos posteriores.
-          </p>
+          <p>Analizamos la base de datos de los sorteos jugados de la Lotería Nacional de Beneficencia de Panamá. El sistema busca terminaciones que han salido en el segundo o tercer premio y mide, estadísticamente, la rapidez con la que brincan al primer premio en sorteos posteriores.</p>
         </div>
         <div class="faq-item">
           <h3>¿Qué es el patrón de brincos de lotería?</h3>
-          <p>
-            Es un comportamiento numérico observado empíricamente en la LNB de Panamá, donde los números premiados en posiciones secundarias tienden a saltar a la posición principal (1er premio) en un lapso de 1 a 3 sorteos.
-          </p>
+          <p>Es un comportamiento numérico observado empíricamente en la LNB de Panamá, donde los números premiados en posiciones secundarias tienden a saltar a la posición principal (1er premio) en un lapso de 1 a 3 sorteos.</p>
         </div>
         <div class="faq-item">
           <h3>¿Tengo que pagar suscripciones para usar LotteryX?</h3>
-          <p>
-            No. Registrarse en la aplicación es completamente gratis. El sistema te permite ver los 10 números recomendados del día de hoy y realizar búsquedas de sorteos del año pasado de forma ilimitada.
-          </p>
+          <p>No. Registrarse en la aplicación es completamente gratis. El sistema te permite ver los 10 números recomendados del día de hoy y realizar búsquedas de sorteos del año pasado de forma ilimitada.</p>
         </div>
         <div class="faq-item">
           <h3>¿El sistema garantiza que voy a ganar la Lotería de Panamá?</h3>
-          <p>
-            No. La lotería es un juego de azar. LotteryX provee un análisis probabilístico e histórico que optimiza tus opciones frente a compras ciegas, pero no garantiza resultados ganadores del 100%. Debe usarse como una herramienta informativa y estadística.
-          </p>
+          <p>No. La lotería es un juego de azar. LotteryX provee un análisis probabilístico e histórico que optimiza tus opciones frente a compras ciegas, pero no garantiza resultados ganadores del 100%. Debe usarse como una herramienta informativa y estadística.</p>
         </div>
       </div>
     </section>
 
   </div>
 
-  <!-- Footer conEnlaces SEO de Cumplimiento -->
+  <!-- Footer -->
   <footer class="landing-footer">
     <div class="landing-footer-container">
       <p>&copy; 2026 LotteryX Panamá. Todos los derechos reservados. No afiliado oficialmente a la LNB.</p>
@@ -704,6 +626,24 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    // Hamburger menu
+    var hamburger = document.getElementById('hamburger');
+    var navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', function() {
+      hamburger.classList.toggle('open');
+      navMenu.classList.toggle('open');
+    });
+
+    navMenu.querySelectorAll('.nav-link').forEach(function(link) {
+      link.addEventListener('click', function() {
+        hamburger.classList.remove('open');
+        navMenu.classList.remove('open');
+      });
+    });
+  </script>
 
 </body>
 </html>
