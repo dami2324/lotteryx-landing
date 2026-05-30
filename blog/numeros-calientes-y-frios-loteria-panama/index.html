@@ -105,6 +105,40 @@
     .landing-footer-links { display: flex; gap: 24px; }
     .landing-footer-links a { color: var(--text-muted); text-decoration: none; transition: color 0.2s ease; }
     .landing-footer-links a:hover { color: var(--text-main); }
+
+    /* Tabla de Contenidos */
+    .toc-box {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(16,185,129,0.25);
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin: 40px 0;
+    }
+    .toc-box h4 {
+      color: #10b981;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+    .toc-box ol { margin-left: 20px; margin-bottom: 0; }
+    .toc-box ol li { margin-bottom: 6px; }
+    .toc-box ol li a { color: #9ca3af; text-decoration: none; font-size: 15px; transition: color 0.2s; }
+    .toc-box ol li a:hover { color: #10b981; }
+
+    /* Callout boxes */
+    .callout { border-radius: 14px; padding: 20px 24px; margin: 32px 0; display: flex; gap: 16px; align-items: flex-start; }
+    .callout-icon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
+    .callout-body { flex: 1; }
+    .callout-body strong { display: block; margin-bottom: 6px; font-size: 15px; }
+    .callout-body p { margin-bottom: 0; font-size: 15px; color: #d1d5db; }
+    .callout.dato-clave { background: rgba(16,185,129,0.06); border: 1px solid rgba(16,185,129,0.25); border-left: 4px solid #10b981; }
+    .callout.dato-clave .callout-body strong { color: #10b981; }
+    .callout.recuerda { background: rgba(245,158,11,0.06); border: 1px solid rgba(245,158,11,0.25); border-left: 4px solid #f59e0b; }
+    .callout.recuerda .callout-body strong { color: #f59e0b; }
+    .callout.info { background: rgba(99,102,241,0.06); border: 1px solid rgba(99,102,241,0.25); border-left: 4px solid #6366f1; }
+    .callout.info .callout-body strong { color: #818cf8; }
   </style>
 </head>
 <body>
@@ -142,6 +176,19 @@
     </div>
 
     <div class="blog-content">
+
+      <!-- Tabla de Contenidos -->
+      <div class="toc-box">
+        <h4>📋 Tabla de Contenidos</h4>
+        <ol>
+          <li><a href="#numeros-calientes">¿Qué son los números calientes en el sorteo Miercolito y Dominical?</a></li>
+          <li><a href="#numeros-frios">El poder oculto de los números fríos de la Lotería de Panamá</a></li>
+          <li><a href="#estrategia">Números que más juegan: ¿Calientes o Fríos? ¿Cuál estrategia es mejor?</a></li>
+          <li><a href="#lotteryx">Cómo LotteryX calcula por ti las probabilidades matemáticas</a></li>
+          <li><a href="#ventaja">Empieza a jugar a la Lotería Nacional de Beneficencia con ventaja</a></li>
+        </ol>
+      </div>
+
       <p>
         ¡Qué xopa, mi gente! Hablemos claro. Cuando llega el sorteo Miercolito o el Dominical de la Lotería Nacional de Panamá, todos queremos lo mismo: pegar el primer premio y celebrar. Pero seamos honestos, la mayoría de nosotros terminamos comprando los números de la fecha de cumpleaños del abuelo, lo que soñamos la noche anterior, o peor aún, el número que nos ofreció el billetero porque era el único que le quedaba en el tablero. 
       </p>
@@ -156,7 +203,7 @@
         ¿Te has preguntado por qué de pronto sientes que hay números que salen a cada rato y otros que parecen estar escondidos por meses? Bueno, eso no es brujería, es pura matemática. Y entenderlo es el primer paso para cambiar tu suerte.
       </p>
 
-      <h2>¿Qué son los números calientes en el sorteo Miercolito y Dominical?</h2>
+      <h2 id="numeros-calientes">¿Qué son los números calientes en el sorteo Miercolito y Dominical?</h2>
       
       <p>
         En el lenguaje de las estadísticas y los juegos de azar, los <strong>números calientes</strong> (o "hot numbers") son aquellas terminaciones o combinaciones de dos dígitos que tienen una frecuencia de aparición inusualmente alta en un periodo reciente. Es decir, son los números que "están en racha".
@@ -165,6 +212,14 @@
       <p>
         Por ejemplo, si revisas los últimos 90 días de resultados de la LNB (Lotería Nacional de Beneficencia), podrías notar que el "42" ha salido cuatro veces en el primer premio, mientras que el "15" no asoma la cara. El 42 es tu número caliente. La teoría detrás de apostar a los números calientes sugiere que las tendencias actuales tienden a mantenerse por un tiempo debido a la distribución estadística de los sorteos a corto plazo. Si un número "está saliendo", la gente prefiere montarse en esa ola.
       </p>
+
+      <div class="callout dato-clave">
+        <div class="callout-icon">💡</div>
+        <div class="callout-body">
+          <strong>Dato Clave</strong>
+          <p>Un <strong>número caliente</strong> es aquel que aparece con frecuencia inusualmente alta en los últimos 30-90 días de sorteos. Un <strong>número frío</strong> lleva varias semanas o meses sin aparecer en ningún premio. Ambos pueden ser estratégicos según el momento y el plazo de tu apuesta.</p>
+        </div>
+      </div>
 
       <p>
         El panameño es muy dado a "casarse con un número". Si tú siempre compras el 11 porque es tu favorito, puede que lo estés jugando justo en el momento en que está totalmente frío. Apostar al menos un par de chances a los números calientes te mantiene en sintonía con la tendencia actual de la tómbola oficial. Si quieres ahorrar tiempo, puedes <a href="https://app.digitalboxstore.site/" title="App para ganar la lotería Miercolito">revisar el top de números calientes</a> automáticamente.
@@ -176,7 +231,7 @@
         <a href="https://app.digitalboxstore.site/" class="btn-blog-cta" rel="nofollow">Ver Números Calientes Gratis</a>
       </div>
 
-      <h2>El poder oculto de los números fríos de la Lotería de Panamá</h2>
+      <h2 id="numeros-frios">El poder oculto de los números fríos de la Lotería de Panamá</h2>
 
       <p>
         Ahora, vamos al otro extremo de la balanza. Los <strong>números fríos</strong> son exactamente lo contrario: son aquellos billetes y chances cuyas terminaciones llevan una sequía prolongada. Es el clásico número que las doñitas en el barrio dicen: "Ese número nos chifea, tiene más de 6 meses que no juega".
@@ -192,7 +247,15 @@
         Esto significa que si un número lleva "demasiado" tiempo sin salir, la tensión probabilística aumenta. Su probabilidad teórica de que juegue en el próximo sorteo empieza a sentirse cada vez más fuerte. Muchos estrategas apuestan a los números fríos esperando ese inevitable rebote matemático que puedes <a href="https://app.digitalboxstore.site/" title="Rastreador de números fríos de la lotería">monitorear en la aplicación</a>. ¡Es como una liga que se estira y eventualmente tiene que soltarse!
       </p>
 
-      <h2>Números que más juegan: ¿Calientes o Fríos? ¿Cuál estrategia es mejor?</h2>
+      <div class="callout info">
+        <div class="callout-icon">📊</div>
+        <div class="callout-body">
+          <strong>La Ley de los Grandes Números</strong>
+          <p>A largo plazo, todos los números del <strong>00 al 99</strong> deberían salir la misma cantidad de veces en un sorteo justo. Si un número lleva meses sin aparecer, la matemática sugiere que su "turno" está cada vez más cerca. Este principio se llama <strong>regresión a la media</strong>.</p>
+        </div>
+      </div>
+
+      <h2 id="estrategia">Números que más juegan: ¿Calientes o Fríos? ¿Cuál estrategia es mejor?</h2>
 
       <p>
         Seguro te estás haciendo esta pregunta: "Ok, entiendo. Pero, ¿a qué le meto mi plata? ¿Al que está caliente o al que está frío?". La respuesta honesta de cualquier estadístico es: depende de tu perfil de jugador.
@@ -207,13 +270,21 @@
         Sin embargo, la estrategia de oro de los grandes ganadores es la <strong>combinación inteligente</strong>. Comprar un par de pedazos de billete de un número caliente que tiene inercia, y al mismo tiempo respaldarte con un chance de un número sumamente frío que ya le toca salir a dar la cara. Así cubres ambos lados del espectro estadístico de la Lotería de Panamá.
       </p>
 
+      <div class="callout recuerda">
+        <div class="callout-icon">⚠️</div>
+        <div class="callout-body">
+          <strong>Recuerda</strong>
+          <p>La lotería es un juego de <strong>azar</strong>. Las estadísticas de números calientes y fríos son herramientas que mejoran tu información, no garantías de ganar. Juega siempre con un presupuesto que puedas permitirte perder.</p>
+        </div>
+      </div>
+
       <div class="blog-inline-cta" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(99, 102, 241, 0.05) 100%);">
         <h3>Aplica ambas estrategias sin dolores de cabeza</h3>
         <p>No tienes que revisar periódicos viejos ni llevar libretas. LotteryX filtra en segundos los números calientes y fríos de la LNB.</p>
         <a href="https://app.digitalboxstore.site/" class="btn-blog-cta" rel="nofollow">Generar mi Top 10 con LotteryX</a>
       </div>
 
-      <h2>Cómo LotteryX calcula por ti las probabilidades matemáticas</h2>
+      <h2 id="lotteryx">Cómo LotteryX calcula por ti las probabilidades matemáticas</h2>
 
       <p>
         Sabemos que estás ocupado. Trabajas, cuidas a la familia, aguantas el tranque panameño todos los días. No tienes tiempo para sentarte con una calculadora a sacar el promedio de los últimos 90 días de sorteos Miercolito y Dominical. 
@@ -233,7 +304,7 @@
         Además, te mostramos el puntaje exacto de fuerza de cada número. Así, cuando te pares frente al tablero de tu billetero de confianza, no estarás adivinando. Sabrás exactamente qué pedir con seguridad. Dejas de gastar por taquilla, y empiezas a invertir con inteligencia artificial en tus manos.
       </p>
 
-      <h2>Empieza a jugar a la Lotería Nacional de Beneficencia con ventaja</h2>
+      <h2 id="ventaja">Empieza a jugar a la Lotería Nacional de Beneficencia con ventaja</h2>
 
       <p>
         Ganar la Lotería de Panamá siempre tendrá un componente de azar, eso no te lo vamos a negar. Pero la diferencia entre el jugador promedio y el jugador inteligente radica en la información. Identificar correctamente los números calientes, rastrear a los fríos y cruzar eso con el patrón de brincos te pone pasos adelante de la multitud.

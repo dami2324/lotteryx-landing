@@ -288,6 +288,69 @@
     .landing-footer-links a:hover {
       color: var(--text-main);
     }
+
+    /* Tabla de Contenidos */
+    .toc-box {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(16,185,129,0.25);
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin: 40px 0;
+    }
+    .toc-box h4 {
+      color: #10b981;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+    .toc-box ol {
+      margin-left: 20px;
+      margin-bottom: 0;
+    }
+    .toc-box ol li {
+      margin-bottom: 6px;
+    }
+    .toc-box ol li a {
+      color: #9ca3af;
+      text-decoration: none;
+      font-size: 15px;
+      transition: color 0.2s;
+    }
+    .toc-box ol li a:hover { color: #10b981; }
+
+    /* Callout boxes */
+    .callout {
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .callout-icon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
+    .callout-body { flex: 1; }
+    .callout-body strong { display: block; margin-bottom: 6px; font-size: 15px; }
+    .callout-body p { margin-bottom: 0; font-size: 15px; color: #d1d5db; }
+    .callout.dato-clave {
+      background: rgba(16,185,129,0.06);
+      border: 1px solid rgba(16,185,129,0.25);
+      border-left: 4px solid #10b981;
+    }
+    .callout.dato-clave .callout-body strong { color: #10b981; }
+    .callout.recuerda {
+      background: rgba(245,158,11,0.06);
+      border: 1px solid rgba(245,158,11,0.25);
+      border-left: 4px solid #f59e0b;
+    }
+    .callout.recuerda .callout-body strong { color: #f59e0b; }
+    .callout.info {
+      background: rgba(99,102,241,0.06);
+      border: 1px solid rgba(99,102,241,0.25);
+      border-left: 4px solid #6366f1;
+    }
+    .callout.info .callout-body strong { color: #818cf8; }
   </style>
 </head>
 <body>
@@ -321,6 +384,17 @@
     </div>
 
     <div class="blog-content">
+
+      <!-- Tabla de Contenidos -->
+      <div class="toc-box">
+        <h4>📋 Tabla de Contenidos</h4>
+        <ol>
+          <li><a href="#mito-azar">El Mito del Azar vs. la Regresión a la Media</a></li>
+          <li><a href="#metodo-brincos">¿Qué es el Método de los Brincos en la Lotería de Panamá?</a></li>
+          <li><a href="#paso-a-paso">Paso a Paso: Cómo Jugar de Forma Inteligente</a></li>
+          <li><a href="#consejos-de-oro">Consejos de Oro para tus apuestas en la LNB</a></li>
+        </ol>
+      </div>
       <p>
         Jugar a la lotería en Panamá es una tradición arraigada en el corazón de miles de personas. Cada miércoles con el Sorteo Miercolito y cada domingo con el Sorteo Dominical, la emoción se apodera del país. Sin embargo, la gran mayoría de las personas confía su suerte a factores puramente aleatorios: los sueños, las pirámides del periódico, o la famosa "limpieza" de números.
       </p>
@@ -328,7 +402,7 @@
         Pero, ¿qué pasaría si te dijéramos que puedes abordar la Lotería Nacional de Beneficencia (LNB) con **ciencia y datos históricos**? En esta guía te explicamos cómo funciona el <strong>método de brincos estadísticos</strong>, la herramienta matemática definitiva para optimizar tus jugadas.
       </p>
 
-      <h2>El Mito del Azar vs. la Regresión a la Media</h2>
+      <h2 id="mito-azar">El Mito del Azar vs. la Regresión a la Media</h2>
       <p>
         Los sorteos de la Lotería de Panamá son sistemas físicos donde cada esfera tiene, en teoría, la misma probabilidad de salir. Sin embargo, cuando analizamos los resultados a lo largo del tiempo (1 año, 5 años o más), empezamos a ver patrones. Aquí es donde entra en juego la **Ley de los Grandes Números** y la regresión a la media.
       </p>
@@ -343,20 +417,22 @@
         <a href="https://app.digitalboxstore.site/" class="btn-blog-cta" rel="nofollow">Obtener 10 Números Gratis</a>
       </div>
 
-      <h2>¿Qué es el Método de los Brincos en la Lotería de Panamá?</h2>
+      <h2 id="metodo-brincos">¿Qué es el Método de los Brincos en la Lotería de Panamá?</h2>
       <p>
         En la LNB de Panamá se juegan tres premios principales: Primer Premio, Segundo Premio y Tercer Premio. El **método de brincos** consiste en rastrear aquellas combinaciones de dos dígitos (chances) que han sido premiadas en la segunda y tercera posición en sorteos recientes, y calcular cuáles de ellas tienen la mayor probabilidad de "brincar" o aparecer en el primer premio del siguiente sorteo.
       </p>
       <p>
         Este patrón no es una casualidad mágica. Históricamente, en los sorteos oficiales de Panamá, se ha detectado que:
       </p>
-      <ul>
-        <li>Aproximadamente el **40% de los primeros premios** corresponden a números que salieron en 2do o 3er premio en los 3 sorteos inmediatamente anteriores.</li>
-        <li>El lapso más común para que ocurra un brinco efectivo es de **1 a 2 sorteos**.</li>
-        <li>Los números con mayor retraso en salir acumulado en posiciones menores acumulan una "fuerza de rebote" matemática.</li>
-      </ul>
+      <div class="callout dato-clave">
+        <div class="callout-icon">💡</div>
+        <div class="callout-body">
+          <strong>Dato Clave</strong>
+          <p>Aproximadamente el <strong>40% de los primeros premios</strong> corresponden a números que salieron en 2do o 3er premio en los <strong>3 sorteos inmediatamente anteriores</strong>. El lapso más común para que ocurra un brinco efectivo es de <strong>1 a 2 sorteos</strong>. Los números con mayor retraso en posiciones menores acumulan una "fuerza de rebote" matemática.</p>
+        </div>
+      </div>
 
-      <h2>Paso a Paso: Cómo Jugar de Forma Inteligente</h2>
+      <h2 id="paso-a-paso">Paso a Paso: Cómo Jugar de Forma Inteligente</h2>
       <p>
         Si deseas aplicar este análisis en tus compras de chances y billetes en Panamá, sigue estos pasos estadísticos:
       </p>
@@ -369,7 +445,7 @@
         Hacer este cálculo manualmente toma horas de recopilación de datos y matemáticas complejas antes de cada sorteo de miércoles o domingo. Por eso, en <strong>LotteryX</strong> automatizamos todo el proceso recopilando los datos reales y entregándote el cálculo exacto de forma instantánea.
       </p>
 
-      <h2>Consejos de Oro para tus apuestas en la LNB</h2>
+      <h2 id="consejos-de-oro">Consejos de Oro para tus apuestas en la LNB</h2>
       <p>
         Aunque la matemática nos da una ventaja competitiva, nunca olvides jugar con responsabilidad:
       </p>
@@ -378,6 +454,14 @@
         <li><strong>Busca números "hermanos":</strong> Si tu análisis sugiere el 24, asegúrate de considerar el 42 (su inverso), ya que los brincos suelen revertirse con frecuencia en la Lotería de Panamá.</li>
         <li><strong>Mantén la consistencia:</strong> El análisis estadístico funciona a mediano y largo plazo. Mantener una estrategia consistente da mejores resultados que cambiar de método en cada sorteo.</li>
       </ul>
+
+      <div class="callout recuerda">
+        <div class="callout-icon">⚠️</div>
+        <div class="callout-body">
+          <strong>Recuerda</strong>
+          <p>El análisis estadístico <strong>no garantiza resultados</strong>. Juega siempre con responsabilidad y dentro de un presupuesto que puedas permitirte. La lotería es un juego de azar y ningún método elimina completamente el riesgo de pérdida.</p>
+        </div>
+      </div>
 
       <div class="blog-inline-cta" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(99, 102, 241, 0.05) 100%);">
         <h3>Tu acceso al generador inteligente es gratuito</h3>

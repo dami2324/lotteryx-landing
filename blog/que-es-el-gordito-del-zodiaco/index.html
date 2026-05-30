@@ -316,6 +316,27 @@
     .landing-footer-links a:hover {
       color: var(--text-main);
     }
+
+    /* Tabla de Contenidos */
+    .toc-box { background: rgba(255,255,255,0.03); border: 1px solid rgba(16,185,129,0.25); border-radius: 16px; padding: 28px 32px; margin: 40px 0; }
+    .toc-box h4 { color: #10b981; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+    .toc-box ol { margin-left: 20px; margin-bottom: 0; }
+    .toc-box ol li { margin-bottom: 6px; }
+    .toc-box ol li a { color: #9ca3af; text-decoration: none; font-size: 15px; transition: color 0.2s; }
+    .toc-box ol li a:hover { color: #10b981; }
+
+    /* Callout boxes */
+    .callout { border-radius: 14px; padding: 20px 24px; margin: 32px 0; display: flex; gap: 16px; align-items: flex-start; }
+    .callout-icon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
+    .callout-body { flex: 1; }
+    .callout-body strong { display: block; margin-bottom: 6px; font-size: 15px; }
+    .callout-body p { margin-bottom: 0; font-size: 15px; color: #d1d5db; }
+    .callout.dato-clave { background: rgba(16,185,129,0.06); border: 1px solid rgba(16,185,129,0.25); border-left: 4px solid #10b981; }
+    .callout.dato-clave .callout-body strong { color: #10b981; }
+    .callout.recuerda { background: rgba(245,158,11,0.06); border: 1px solid rgba(245,158,11,0.25); border-left: 4px solid #f59e0b; }
+    .callout.recuerda .callout-body strong { color: #f59e0b; }
+    .callout.info { background: rgba(99,102,241,0.06); border: 1px solid rgba(99,102,241,0.25); border-left: 4px solid #6366f1; }
+    .callout.info .callout-body strong { color: #818cf8; }
   </style>
 </head>
 <body>
@@ -349,8 +370,25 @@
     </div>
 
     <div class="blog-content">
+
+      <!-- Tabla de Contenidos -->
+      <div class="toc-box">
+        <h4>📋 Tabla de Contenidos</h4>
+        <ol>
+          <li><a href="#que-es-gordito">El Gordito del Zodiaco: el sorteo mensual de la LNB</a></li>
+          <li><a href="#prediccion">Predicción de Números para el Gordito del 29 de Mayo</a></li>
+          <li><a href="#conexion-zodiacal">La Conexión Zodiacal: ¿Influyen los Signos en los Números?</a></li>
+          <li><a href="#app-lotteryx">La App que Todo Jugador de Lotería en Panamá Necesita</a></li>
+          <li><a href="#tabla-premios">Tabla Completa de Premios del Gordito del Zodiaco</a></li>
+          <li><a href="#estrategias">Cómo Jugar Inteligente: 7 Estrategias que Usan los Mejores</a></li>
+          <li><a href="#donde-ver">Dónde Ver en Vivo el Gordito del Zodiaco</a></li>
+          <li><a href="#faq">Preguntas Frecuentes</a></li>
+        </ol>
+      </div>
+
       <img src="https://i.ibb.co/Xx7sLSd8/portada.webp" alt="Gordito del Zodiaco Portada">
 
+      <h2 id="que-es-gordito">El Gordito del Zodiaco: el sorteo mensual más esperado</h2>
       <p>
         El Gordito del Zodiaco es, sin duda, el sorteo más esperado por los jugadores de lotería en Panamá. A diferencia del Sorteo Dominical y el Miercolito —que se celebran semanalmente—, el Gordito del Zodiaco es un evento mensual organizado por la Lotería Nacional de Beneficencia (LNB) que concentra la mayor expectativa de todo el país con su pozo acumulado de más de un millón de balboas.
       </p>
@@ -363,6 +401,14 @@
       <p>
         El precio de entrada también juega a favor del jugador. Una fracción cuesta aproximadamente B/. 2.00, lo que convierte al Gordito del Zodiaco en el sorteo con la mejor relación riesgo-recompensa del mercado de loterías panameño. Cualquier panameño puede participar con una inversión mínima y aspirar al mayor premio mensual del país.
       </p>
+      <div class="callout dato-clave">
+        <div class="callout-icon">💡</div>
+        <div class="callout-body">
+          <strong>Premio Mayor</strong>
+          <p>El Gordito del Zodiaco ofrece un pozo mensual de <strong>$1,004,000</strong>. Una fracción cuesta aproximadamente <strong>B/. 2.00</strong>, haciéndolo el sorteo con mejor relación riesgo-recompensa de la Lotería Nacional de Beneficencia.</p>
+        </div>
+      </div>
+
       <p>
         Otro elemento que hace único a este sorteo es su temática zodiacal. Cada edición lleva el nombre de un signo del zodiaco, lo que genera una mística especial alrededor del sorteo y motiva a los jugadores de ese signo a participar con mayor entusiasmo. Esta conexión entre la astrología y los números de la lotería es parte de la rica cultura lúdica panameña, donde la tradición y el análisis estadístico conviven con naturalidad.
       </p>
@@ -373,7 +419,7 @@
         No es casualidad que miles de panameños se despierten el último viernes de cada mes pensando en el Gordito. Es un ritual cultural que mezcla esperanza, tradición y emoción en partes iguales. Y este viernes 29 de mayo de 2026, esa tradición se repite con un premio que puede transformar la vida de cualquier familia panameña.
       </p>
 
-      <h2>Predicción de Números para el Gordito del Zodiaco del 29 de Mayo de 2026</h2>
+      <h2 id="prediccion">Predicción de Números para el Gordito del Zodiaco del 29 de Mayo de 2026</h2>
       <p>
         Cada mes, antes del Gordito del Zodiaco, los jugadores más experimentados de Panamá recurren a diferentes métodos para intentar anticipar cuáles serán los números ganadores. Desde la famosa Pirámide de Chakatín hasta sistemas de análisis estadístico basados en sorteos anteriores, existe toda una cultura alrededor de la predicción de números en la lotería panameña.
       </p>
@@ -410,7 +456,7 @@
         Además, el análisis de frecuencia de los últimos dígitos del primer premio muestra que los terminales 1, 2 y 8 tienen una presencia superior al promedio en los sorteos del Gordito del Zodiaco celebrados entre marzo y junio de años recientes. Esta tendencia estacional es una de las razones por las que muchos jugadores apuestan a billetes terminados en estos dígitos durante la temporada de mayo y junio.
       </p>
 
-      <h2>La Conexión Zodiacal: ¿Influyen los Signos en los Números?</h2>
+      <h2 id="conexion-zodiacal">La Conexión Zodiacal: ¿Influyen los Signos en los Números?</h2>
       <p>
         Uno de los elementos más fascinantes del Gordito del Zodiaco es precisamente su temática astrológica. Aunque el signo del sorteo no determina matemáticamente los números ganadores, miles de jugadores panameños buscan conexiones entre el signo del mes y sus números de la suerte personales. Si tu signo solar o ascendente coincide con el signo del sorteo de este mes, muchos expertos en numerología zodiacal recomiendan considerar números asociados a las características del signo: sus planetas regentes, sus colores de poder y sus números kármicos tradicionales.
       </p>
@@ -421,7 +467,7 @@
         Este tipo de enfoque no es puramente científico, pero forma parte de la rica cultura lúdica panameña, donde la mística y el análisis coexisten con respeto mutuo para darle al jugador su propia estrategia personal y significativa.
       </p>
 
-      <h2>La App que Todo Jugador de Lotería en Panamá Necesita Antes del Gordito del Zodiaco</h2>
+      <h2 id="app-lotteryx">La App que Todo Jugador de Lotería en Panamá Necesita Antes del Gordito del Zodiaco</h2>
       <p>
         Seamos honestos: prepararte bien para el Gordito del Zodiaco no se trata solo de comprar un billete y cruzar los dedos. Los jugadores más inteligentes de Panamá llevan años usando herramientas digitales que les permiten analizar datos históricos, comparar combinaciones y generar predicciones basadas en algoritmos que procesan toda la información disponible de sorteos anteriores.
       </p>
@@ -451,7 +497,7 @@
 
       <img src="https://i.ibb.co/8gBfqqQp/Chat-GPT-Image-29-may-2026-01-07-30-a-m.webp" alt="App Preview">
 
-      <h2>Tabla Completa de Premios del Gordito del Zodiaco 29 de Mayo 2026</h2>
+      <h2 id="tabla-premios">Tabla Completa de Premios del Gordito del Zodiaco 29 de Mayo 2026</h2>
       <p>
         Una de las razones por las que el Gordito del Zodiaco es tan popular entre los panameños es que hay múltiples formas de ganar. No tienes que acertar el primer premio completo para salir con algo en el bolsillo. Aquí te explicamos todas las categorías de premios disponibles para el sorteo del 29 de mayo:
       </p>
@@ -513,7 +559,7 @@
         <strong>Consejo práctico:</strong> conserva tu billete en perfectas condiciones desde hoy hasta el sorteo del viernes. La Lotería Nacional de Beneficencia no se responsabiliza por billetes dañados o ilegibles. Si juegas en fracción física, guárdala en un lugar seco, sin dobleces y alejada del calor directo.
       </p>
 
-      <h2>Cómo Jugar Inteligente el Gordito del Zodiaco: 7 Estrategias que Usan los Mejores</h2>
+      <h2 id="estrategias">Cómo Jugar Inteligente el Gordito del Zodiaco: 7 Estrategias que Usan los Mejores</h2>
       <p>
         No existe una fórmula mágica para ganar la lotería. Sería mentirte decirte lo contrario. Pero sí existen estrategias que los jugadores más experimentados de Panamá aplican de forma sistemática para maximizar sus posibilidades dentro del margen que el azar permite. Aquí te las compartimos para que este 29 de mayo entres al Gordito del Zodiaco con la mejor actitud, la mejor preparación y la mejor información disponible.
       </p>
@@ -530,7 +576,7 @@
 
       <img src="https://i.ibb.co/PsGDyCWF/Chat-GPT-Image-29-may-2026-01-09-26-a-m.webp" alt="App Prev">
 
-      <h2>¿Dónde Ver en Vivo el Gordito del Zodiaco del 29 de Mayo de 2026?</h2>
+      <h2 id="donde-ver">¿Dónde Ver en Vivo el Gordito del Zodiaco del 29 de Mayo de 2026?</h2>
       <p>
         El sorteo del Gordito del Zodiaco del 29 de mayo de 2026 comenzará a las 3:00 p.m. hora de Panamá (GMT-5). Te recomendamos estar atento a la transmisión desde las 2:45 p.m. para no perderte el inicio del repique de balotas.
       </p>
@@ -544,7 +590,7 @@
         <li><strong>App de Digital Box Store.</strong> Una vez publicados los resultados oficiales, la plataforma actualiza los números ganadores al instante y te permite comparar automáticamente con tu billete. Muchos usuarios la prefieren porque la verificación es instantánea y no tienen que estar pendientes del televisor durante todo el sorteo. Si no puedes ver el sorteo en vivo, la app te notifica los resultados en el momento en que son publicados oficialmente.</li>
       </ul>
 
-      <h2>Preguntas Frecuentes sobre el Gordito del Zodiaco del 29 de Mayo</h2>
+      <h2 id="faq">Preguntas Frecuentes sobre el Gordito del Zodiaco del 29 de Mayo</h2>
       <ul>
         <li><strong>¿A qué hora es el Gordito del Zodiaco del 29 de mayo de 2026?</strong> El sorteo comienza a las 3:00 p.m. hora de Panamá (GMT-5). Te recomendamos estar atento desde las 2:45 p.m. para no perderte el inicio.</li>
         <li><strong>¿Cuánto cuesta un billete del Gordito del Zodiaco?</strong> Una fracción cuesta aproximadamente B/. 2.00. Un billete completo puede costar hasta B/. 90.00 dependiendo de la cantidad de fracciones que adquieras en un solo número.</li>
@@ -565,6 +611,14 @@
       <p>
         No dejes que el viernes llegue sin tu preparación. Entra ahora a app.digitalboxstore.site, genera tu pirámide personalizada, revisa los números calientes del mes y define tu jugada con la misma seriedad que le pones a todo lo importante en tu vida.
       </p>
+      <div class="callout recuerda">
+        <div class="callout-icon">⚠️</div>
+        <div class="callout-body">
+          <strong>Juega con Responsabilidad</strong>
+          <p>La lotería es un juego de <strong>azar</strong>. Ninguna predicción, pirámide ni algoritmo garantiza resultados. Establece siempre un presupuesto razonable y respeta ese límite. Para resultados oficiales visita lnb.gob.pa.</p>
+        </div>
+      </div>
+
       <p>
         La suerte favorece a los preparados. ¡Buena suerte este viernes 29 de mayo!
       </p>
