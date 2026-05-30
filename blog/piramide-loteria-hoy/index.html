@@ -98,6 +98,27 @@
     .landing-footer-links { display: flex; gap: 24px; }
     .landing-footer-links a { color: var(--text-muted); text-decoration: none; transition: color 0.2s ease; }
     .landing-footer-links a:hover { color: var(--text-main); }
+
+    /* Tabla de Contenidos */
+    .toc-box { background: rgba(255,255,255,0.03); border: 1px solid rgba(16,185,129,0.25); border-radius: 16px; padding: 28px 32px; margin: 40px 0; }
+    .toc-box h4 { color: #10b981; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+    .toc-box ol { margin-left: 20px; margin-bottom: 0; }
+    .toc-box ol li { margin-bottom: 6px; }
+    .toc-box ol li a { color: #9ca3af; text-decoration: none; font-size: 15px; transition: color 0.2s; }
+    .toc-box ol li a:hover { color: #10b981; }
+
+    /* Callout boxes */
+    .callout { border-radius: 14px; padding: 20px 24px; margin: 32px 0; display: flex; gap: 16px; align-items: flex-start; }
+    .callout-icon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
+    .callout-body { flex: 1; }
+    .callout-body strong { display: block; margin-bottom: 6px; font-size: 15px; }
+    .callout-body p { margin-bottom: 0; font-size: 15px; color: #d1d5db; }
+    .callout.dato-clave { background: rgba(16,185,129,0.06); border: 1px solid rgba(16,185,129,0.25); border-left: 4px solid #10b981; }
+    .callout.dato-clave .callout-body strong { color: #10b981; }
+    .callout.recuerda { background: rgba(245,158,11,0.06); border: 1px solid rgba(245,158,11,0.25); border-left: 4px solid #f59e0b; }
+    .callout.recuerda .callout-body strong { color: #f59e0b; }
+    .callout.info { background: rgba(99,102,241,0.06); border: 1px solid rgba(99,102,241,0.25); border-left: 4px solid #6366f1; }
+    .callout.info .callout-body strong { color: #818cf8; }
   </style>
 </head>
 <body>
@@ -132,6 +153,19 @@
       </div>
     </div>
     <div class="blog-content">
+
+      <!-- Tabla de Contenidos -->
+      <div class="toc-box">
+        <h4>📋 Tabla de Contenidos</h4>
+        <ol>
+          <li><a href="#introduccion">Introducción a la Pirámide de la Lotería</a></li>
+          <li><a href="#como-funciona">Cómo funciona la Pirámide de la Lotería de hoy</a></li>
+          <li><a href="#patrones">Números, patrones y tendencias que debes mirar</a></li>
+          <li><a href="#errores">Errores comunes al interpretar los resultados</a></li>
+          <li><a href="#herramientas">Cómo usar LotteryX para analizar mejor</a></li>
+        </ol>
+      </div>
+
       <div class="key-takeaways bg-blue-50 border-l-4 border-blue-500 rounded-r-lg p-5 mb-8">
   <h2 class="text-base font-bold text-blue-800 mb-3 mt-0">📌 Puntos Clave</h2>
   <ul class="space-y-1 text-sm text-blue-900 list-none p-0 m-0">
@@ -144,7 +178,7 @@
 
 <img src="https://images.unsplash.com/photo-1611592203596-fbf7e31004c4?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w5NTg3Nzh8MHwxfHNlYXJjaHwxfHxQaXIlQzMlQTFtaWRlJTIwZGUlMjBsYSUyMExvdGVyJUMzJUFEYSUyMGRlJTIwaG95JTIwY29uY2VwdHxlbnwwfDB8fHwxNzc5ODc2MjE1fDA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=1080" alt="Pirámide de la Lotería de hoy" data-alt="Pirámide de la Lotería de hoy" data-title="Pirámide de la Lotería de Hoy: Análisis y Consejos" title="Pirámide de la Lotería de Hoy: Análisis y Consejos">
 
-<h2>Introducción</h2>
+<h2 id="introduccion">Introducción</h2>
 
 <h3>Por qué Pirámide de la Lotería de hoy despierta tanto interés</h3>
 La *Pirámide de la Lotería de hoy* se ha convertido en un tema candente entre los aficionados a las loterías en Panamá. ¿Por qué? Porque ofrece una manera visual y estructurada de identificar patrones numéricos en sorteos recientes. Este enfoque no solo fascina, sino que también permite a los jugadores analizar los números de manera más objetiva. Al observar cómo ciertos números aparecen en la pirámide, puedes empezar a notar tendencias que podrías haber pasado por alto de otro modo. Este método se ha vuelto popular porque, aunque no garantiza el éxito, sí ayuda a tomar decisiones más informadas al momento de jugar.
@@ -156,7 +190,7 @@ Antes de lanzarnos a sacar conclusiones basadas en la *Pirámide de la Lotería 
 
 Además, es crucial considerar la frecuencia de combinaciones de números. Observa si hay combinaciones que se repiten con regularidad. Al final del día, nuestra meta es usar estos datos para identificar patrones y tendencias que nos ayuden a tomar decisiones más informadas en el juego. ¿Estás listo para adentrarte en el análisis de estas cifras y descubrir qué secretos pueden revelar?
 
-<h2>Cómo funciona la Pirámide de la Lotería de hoy</h2>
+<h2 id="como-funciona">Cómo funciona la Pirámide de la Lotería de hoy</h2>
 
 <h3>Sorteos principales y horarios</h3>
 <p>La <strong>Pirámide de la Lotería</strong> no es solo un mito urbano; es una herramienta que muchos jugadores utilizan para identificar patrones en los sorteos principales del día. En Panamá, los sorteos más populares suelen realizarse a las 13:00 y a las 19:00 horas. Estos horarios son clave para los entusiastas de la lotería que buscan optimizar sus jugadas. Si te preguntas cómo aprovechar mejor estos sorteos, es vital estar al tanto de las horas y planificar tus estrategias con antelación.</p>
@@ -170,10 +204,18 @@ Además, es crucial considerar la frecuencia de combinaciones de números. Obser
 <p>Jugar a la lotería sin una estrategia es como navegar sin brújula. La <strong>Pirámide de la Lotería</strong> te proporciona la orientación necesaria para no jugar a ciegas. Al analizar patrones y resultados anteriores, puedes tomar decisiones más informadas y evitar caer en la trampa de escoger números al azar. ¿Por qué dejar tu suerte al azar cuando puedes optimizarla con datos?</p>
 <p>Con una herramienta como LotteryX a tu disposición, puedes obtener insights valiosos que van más allá de meras corazonadas. La clave está en entender que, aunque no hay garantías, jugar con información te pone en una mejor posición. Así, cada jugada se transforma en una decisión calculada, no en un simple acto de fe. Recuerda que el conocimiento es poder, y en el mundo de la lotería, puede ser la diferencia entre ganar o perder.</p>
 
-<h2>Números, patrones y tendencias que debes mirar</h2>
+<h2 id="patrones">Números, patrones y tendencias que debes mirar</h2>
 <h3>Frecuencia de aparición</h3>
 <p>La frecuencia de aparición de los números es un aspecto clave al analizar la <strong>pirámide de la lotería</strong>. Este método te permite identificar qué números suelen salir más a menudo. ¿Alguna vez te has preguntado por qué ciertos números parecen tener más suerte? Puede que no sea solo suerte, sino un patrón que se repite. Analizar la frecuencia te ayuda a tomar decisiones más informadas en lugar de confiar únicamente en el azar.</p>
 <p>Por ejemplo, si observas que el número 7 aparece con más frecuencia en los últimos meses, podría ser una buena idea considerarlo en tus próximas jugadas. Sin embargo, también hay que ser cauteloso. No todos los números que aparecen frecuentemente seguirán haciéndolo, y ahí es donde entra en juego el análisis continuo.</p>
+
+<div class="callout dato-clave">
+  <div class="callout-icon">💡</div>
+  <div class="callout-body">
+    <strong>Dato Clave</strong>
+    <p>La frecuencia de aparición ayuda a identificar tendencias. Sin embargo, recuerda siempre que la lotería es un evento independiente en cada sorteo.</p>
+  </div>
+</div>
 
 <h3>Números calientes y fríos</h3>
 <p>Los números calientes son aquellos que han aparecido repetidamente en los últimos sorteos, mientras que los números fríos son lo opuesto. Estos últimos no han salido recientemente. ¿Qué estrategia seguirías: apostar por los números calientes o arriesgarte con los fríos? Esta es una pregunta que cada jugador debe responder dependiendo de su estilo.</p>
@@ -192,7 +234,7 @@ Además, es crucial considerar la frecuencia de combinaciones de números. Obser
 
 <img src="UNSPLASH_PLACEHOLDER_2" alt="sorteos principales" data-alt="sorteos principales" data-title="Concepto clave">
 
-<h2>Errores comunes al interpretar los resultados</h2>
+<h2 id="errores">Errores comunes al interpretar los resultados</h2>
 
 <h3>Creer que un número está garantizado</h3>
 Pensar que un número tiene garantía de salir en la lotería es un mito común. Aunque algunos números puedan parecer más frecuentes, la realidad es que cada sorteo es independiente y los números ganadores se eligen al azar. Imagina que ves un número aparecer varias veces en una semana; podrías asumir que es "caliente". Pero, ¿realmente lo es? No te dejes engañar por patrones ilusorios. Confía en análisis estadísticos más que en corazonadas. En LotteryX, puedes encontrar <a href="/blog/prediccion-loteria-panama/" data-internal-link>guías detalladas</a> sobre cómo evaluar estos datos.
@@ -206,7 +248,7 @@ Apostar sin establecer un presupuesto es un paso hacia el desastre financiero. E
 <h3>Perseguir pérdidas</h3>
 Perseguir pérdidas es un error que puede costarte caro. Al tratar de recuperar lo perdido, es fácil caer en un ciclo vicioso de apuestas impulsivas. ¿Te ha pasado que después de una mala racha decides doblar tu apuesta para "recuperar"? Esta táctica rara vez funciona. Es mejor aceptar las pérdidas como parte del juego y seguir adelante con una mente clara. En vez de perseguir pérdidas, enfócate en mejorar tus estrategias y análisis. LotteryX ofrece recursos para ayudarte a tomar decisiones más informadas, evitando este error tan común.
 
-<h2>Cómo usar LotteryX para analizar mejor</h2>
+<h2 id="herramientas">Cómo usar LotteryX para analizar mejor</h2>
 
 <h3>Lectura estadística</h3>
 <p>¿Te has preguntado cómo utilizar la <strong>pirámide de la lotería</strong> para afinar tus estrategias? LotteryX es la herramienta que necesitas. Con su capacidad de lectura estadística avanzada, te permite examinar números pasados y patrones ocultos que podrían influir en los sorteos futuros. Imagina tener acceso a datos históricos y probabilidades calculadas al instante. Esto te ofrece una perspectiva más clara y fundamentada para tomar decisiones informadas.</p>
@@ -224,6 +266,14 @@ Perseguir pérdidas es un error que puede costarte caro. Al tratar de recuperar 
 <img src="UNSPLASH_PLACEHOLDER_3" alt="números calientes y fríos" data-alt="números calientes y fríos" data-title="Detalle importante">
 
 <h2>Conclusión y CTA</h2>
+
+<div class="callout recuerda">
+  <div class="callout-icon">⚠️</div>
+  <div class="callout-body">
+    <strong>Recuerda</strong>
+    <p>El uso de la Pirámide de la Lotería y herramientas de análisis como LotteryX no garantizan que ganes. Son herramientas para tomar decisiones informadas en un juego de azar. Juega de manera responsable.</p>
+  </div>
+</div>
 
 <h3>Resumen claro</h3>
 Al analizar la <strong>Pirámide de la Lotería de hoy</strong>, hemos desglosado los patrones y tendencias que pueden ayudarte a tomar decisiones más informadas. Desde entender cómo funciona este método hasta evitar errores comunes, cada paso te acerca a una mejor comprensión del juego. Es un recurso valioso para quienes buscan no solo jugar, sino también entender. ¿Por qué no explorar más sobre estas estrategias para aumentar tus posibilidades?
