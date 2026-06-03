@@ -12,52 +12,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO BÁSICO Y POSICIONAMIENTO EN GOOGLE PANAMÁ -->
-  <title>LotteryX | Pronósticos y Análisis de la Lotería de Panamá</title>
-  <meta name="description" content="El algoritmo inteligente para ganar la Lotería de Panamá. Generador de números para el Sorteo Miercolito y Dominical basado en estadísticas de brincos, números calientes, fríos, pirámide y otras estrategias avanzadas de la LNB.">
+  <title>LotteryX | Tecnología estadística para la Lotería de Panamá</title>
+  <meta name="description" content="Deja de jugar a ciegas. LotteryX analiza el historial completo de sorteos de la LNB para entregarte los 10 números con mayor fuerza matemática.">
   <meta name="keywords" content="loteria panama, resultados loteria panama, piramide de la loteria, pronosticos loteria panama, numeros ganadores lnb, sorteo miercolito, sorteo dominical, numeros para jugar loteria panama">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://lotteryx.digitalboxstore.site/">
 
   <!-- OPEN GRAPH -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="LotteryX | Inteligencia Artificial para la Lotería de Panamá">
-  <meta property="og:description" content="Accede gratis al Top 10 de números sugeridos con mayor fuerza matemática para el próximo sorteo de la Lotería Nacional.">
+  <meta property="og:title" content="LotteryX | Juega con datos, no con fe ciega">
+  <meta property="og:description" content="Elige tu estrategia y recibe los números con mayor fuerza matemática para el próximo sorteo de la Lotería de Panamá.">
   <meta property="og:url" content="https://lotteryx.digitalboxstore.site/">
-  <meta property="og:image" content="https://lotteryx.digitalboxstore.site/og-image.png">
+  <meta property="og:image" content="https://i.ibb.co/8gBfqqQp/Chat-GPT-Image-29-may-2026-01-07-30-a-m.webp">
   <meta property="og:locale" content="es_PA">
 
   <!-- TWITTER CARDS -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="LotteryX | Algoritmo Estadístico LNB Panamá">
-  <meta name="twitter:description" content="Olvídate del azar. Rastrea patrones estadísticos de brincos, números calientes, decenas salidoras y otras estrategias avanzadas en los sorteos Miercolito y Dominical de la Lotería de Panamá.">
+  <meta name="twitter:title" content="LotteryX | Tecnología estadística para la LNB Panamá">
+  <meta name="twitter:description" content="Deja de jugar a ciegas. LotteryX analiza el historial completo de sorteos de la LNB para entregarte los mejores números.">
 
   <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- JSON-LD SCHEMA MARKUP -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "LotteryX",
-    "operatingSystem": "All",
-    "applicationCategory": "UtilitiesApplication",
-    "offers": {
-      "@type": "Offer",
-      "price": "0.00",
-      "priceCurrency": "USD"
-    },
-    "description": "Algoritmo estadístico avanzado para analizar y sugerir números del sorteo Miercolito y Dominical de la Lotería Nacional de Beneficencia de Panamá.",
-    "featureList": [
-      "Predicciones estadísticas basadas en brincos, números calientes, fríos y la pirámide",
-      "Buscador histórico de resultados LNB Panamá",
-      "Actualización en tiempo real tras cada sorteo",
-      "Exportación de análisis estadísticos"
-    ]
-  }
-  </script>
 
   <style>
     :root {
@@ -287,7 +264,7 @@
     .landing-section-title p {
       color: var(--text-muted);
       font-size: 17px;
-      max-width: 550px;
+      max-width: 600px;
       line-height: 1.6;
     }
 
@@ -310,75 +287,70 @@
       gap: 32px;
     }
 
-    .feature-landing-card { display: flex; gap: 24px; }
+    .feature-landing-card { display: flex; gap: 20px; background: var(--glass-bg); padding: 24px; border-radius: 20px; border: 1px solid var(--glass-border); align-items: flex-start;}
 
     .feature-icon-wrapper {
-      background: rgba(16, 185, 129, 0.05);
-      border: 1px solid rgba(16, 185, 129, 0.15);
-      color: var(--primary);
-      width: 56px;
-      height: 56px;
-      border-radius: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      font-size: 28px;
       flex-shrink: 0;
     }
 
-    .feature-landing-info h3 { font-size: 20px; font-weight: 600; margin-bottom: 10px; }
-    .feature-landing-info p { color: var(--text-muted); font-size: 15px; line-height: 1.6; }
+    .feature-landing-info h3 { font-size: 18px; font-weight: 600; margin-bottom: 8px; color: var(--text-main); }
+    .feature-landing-info p { color: var(--text-muted); font-size: 14px; line-height: 1.5; }
+
+    /* ===== TESTIMONIALS ===== */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+
+    .testimonial-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .testimonial-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .testimonial-img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .testimonial-info h4 { font-size: 16px; font-weight: 600; margin-bottom: 4px;}
+    .testimonial-info p { color: var(--primary); font-size: 13px; font-weight: 500;}
+    .testimonial-text { font-style: italic; color: var(--text-muted); font-size: 15px; line-height: 1.6; }
 
     /* ===== CTA ===== */
     .landing-cta-section {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 64px;
-      align-items: center;
-      background: radial-gradient(circle at 100% 100%, rgba(16, 185, 129, 0.05) 0%, transparent 60%);
-    }
-
-    .landing-cta-text { display: flex; flex-direction: column; gap: 24px; }
-
-    .landing-cta-text h2 {
-      font-size: clamp(32px, 5vw, 44px);
-      font-weight: 700;
-      line-height: 1.15;
-    }
-
-    .landing-cta-text p { color: var(--text-muted); font-size: 17px; line-height: 1.6; }
-
-    .landing-cta-benefits { display: flex; flex-direction: column; gap: 16px; }
-
-    .cta-benefit-item { display: flex; align-items: center; gap: 12px; font-size: 15px; }
-    .cta-benefit-item svg { color: var(--primary); flex-shrink: 0; }
-
-    .cta-button-container { display: flex; justify-content: center; width: 100%; }
-
-    .btn-cta-main {
-      display: inline-block;
-      width: 100%;
       text-align: center;
-      background: var(--primary);
-      color: #000;
-      padding: 20px 40px;
-      border-radius: 16px;
-      font-size: 18px;
-      font-weight: 700;
-      text-decoration: none;
-      box-shadow: 0 4px 25px rgba(16, 185, 129, 0.4);
-      transition: transform 0.2s ease, opacity 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+      background: radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.08) 0%, transparent 80%);
     }
 
-    .btn-cta-main:hover { opacity: 0.95; transform: translateY(-2px); }
-
-    .cta-pricing-info { text-align: center; margin-top: 16px; font-size: 14px; color: var(--text-muted); }
-    .cta-pricing-info strong { color: var(--primary); }
+    .landing-cta-section h2 { font-size: clamp(32px, 5vw, 44px); font-weight: 700; line-height: 1.15; }
+    .landing-cta-section p { color: var(--text-muted); font-size: 18px; line-height: 1.6; max-width: 600px;}
+    
+    .cta-trust-text { color: var(--text-muted); font-size: 14px; font-weight: 500; letter-spacing: 0.5px;}
 
     /* ===== FAQ ===== */
     .faq-grid { display: flex; flex-direction: column; gap: 32px; max-width: 800px; margin: 0 auto; width: 100%; }
     .faq-item { border-bottom: 1px solid var(--glass-border); padding-bottom: 32px; }
-    .faq-item h3 { font-size: 20px; font-weight: 600; margin-bottom: 14px; }
-    .faq-item p { color: var(--text-muted); font-size: 16px; line-height: 1.6; }
+    .faq-item h3 { font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--primary); }
+    .faq-item p { color: var(--text-muted); font-size: 15px; line-height: 1.6; }
 
     /* ===== FOOTER ===== */
     .landing-footer { border-top: 1px solid var(--glass-border); padding: 60px 0; margin-top: 80px; }
@@ -387,12 +359,12 @@
       width: min(1000px, 90%);
       margin: 0 auto;
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       align-items: center;
-      flex-wrap: wrap;
-      gap: 32px;
+      gap: 20px;
       color: var(--text-muted);
-      font-size: 15px;
+      font-size: 14px;
+      text-align: center;
     }
 
     .landing-footer-links { display: flex; gap: 24px; }
@@ -401,7 +373,9 @@
 
     /* ===== RESPONSIVE ===== */
     @media (max-width: 900px) {
-      .landing-cta-section { grid-template-columns: 1fr; gap: 48px; padding: 40px; }
+      .landing-cta-section { padding: 40px 20px; }
+      .features-grid-landing { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 768px) {
@@ -441,13 +415,9 @@
       /* Content */
       .landing-container { padding: 60px 0; gap: 80px; }
       .steps-grid { grid-template-columns: 1fr; gap: 40px; }
-      .features-grid-landing { grid-template-columns: 1fr; gap: 32px; }
 
       .landing-hero-actions { flex-direction: column; width: 100%; }
       .btn-primary-lg, .btn-secondary-lg { width: 100%; text-align: center; padding: 16px 24px; }
-
-      .landing-footer-container { flex-direction: column; text-align: center; }
-      .landing-footer-links { flex-wrap: wrap; justify-content: center; }
     }
   </style>
 </head>
@@ -465,8 +435,9 @@
       </button>
       <nav class="landing-nav-links" id="nav-menu">
         <a href="#how-it-works" class="nav-link">Cómo Funciona</a>
-        <a href="#features" class="nav-link">Beneficios de Análisis</a>
-        <a href="#faq" class="nav-link">Preguntas Frecuentes</a>
+        <a href="#features" class="nav-link">Beneficios</a>
+        <a href="#testimonials" class="nav-link">Testimonios</a>
+        <a href="#faq" class="nav-link">FAQ</a>
         <a href="/blog/" class="nav-link">Blog</a>
         <a href="https://app.digitalboxstore.site/" class="btn-nav-cta" rel="nofollow">Acceder a la App</a>
       </nav>
@@ -477,148 +448,207 @@
 
     <!-- Hero Section -->
     <section class="landing-hero">
-      <span class="landing-badge">Pronósticos Estadísticos LNB Panamá</span>
-      <h1>El Algoritmo Avanzado para ganar la Lotería de Panamá</h1>
+      <span class="landing-badge">Tecnología estadística para la Lotería de Panamá</span>
+      <h1>Deja de jugar a ciegas. Empieza a jugar con datos.</h1>
       <p>
-        LotteryX es el único generador inteligente que analiza de forma matemática los patrones de "brincos" históricos, números calientes, fríos, la pirámide y otras estrategias estadísticas avanzadas en los resultados de la Lotería de Panamá. Inicia gratis y descubre el poder de nuestro algoritmo, o desbloquea todo el potencial con Premium.
+        LotteryX analiza el historial completo de sorteos de la LNB para entregarte los 10 números con mayor fuerza matemática — tú eliges la estrategia. Gratis para empezar.
       </p>
       <div class="landing-hero-actions">
-        <a href="https://app.digitalboxstore.site/" class="btn-primary-lg">Obtener Números Gratis</a>
-        <a href="#how-it-works" class="btn-secondary-lg">¿Cómo funciona?</a>
+        <a href="https://app.digitalboxstore.site/" class="btn-primary-lg">Obtener mis números ahora</a>
+        <a href="#how-it-works" class="btn-secondary-lg">Ver cómo funciona</a>
       </div>
-    </section>
-
-    <!-- App Showcase -->
-    <section class="app-showcase" style="display: flex; justify-content: center; align-items: center; margin-top: 40px;">
-      <img src="https://i.ibb.co/FkMtQ3vX/Chat-GPT-Image-28-may-2026-10-30-54-p-m.webp" alt="LotteryX App Pantalla Principal" style="max-width: 100%; width: 400px; border-radius: 28px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1);">
     </section>
 
     <!-- Cómo Funciona -->
     <section id="how-it-works">
       <div class="landing-section-title">
-        <h2>Cómo obtener tus números de lotería en 3 pasos</h2>
-        <p>Nuestro algoritmo estadístico procesa el historial de resultados de Panamá para darte sugerencias filtradas al instante.</p>
+        <h2>Tus números inteligentes en menos de 60 segundos</h2>
+        <p>Sin fórmulas complicadas. Solo entra, elige tu estrategia y juega con ventaja.</p>
       </div>
       <div class="steps-grid">
         <div class="step-card">
           <span class="step-number">01</span>
-          <h3>Registro de Cuenta Gratuito</h3>
-          <p>Crea tu cuenta de forma 100% gratuita para el sorteo del Miercolito o Dominical de esta semana en Panamá.</p>
+          <h3>Escoge tu sorteo</h3>
+          <p>Miercolito, Dominical, Gordito o Extraordinaria — LotteryX cubre todos los sorteos de la LNB.</p>
         </div>
         <div class="step-card">
           <span class="step-number">02</span>
-          <h3>Análisis Estadístico Avanzado</h3>
-          <p>Nuestra base de datos evalúa múltiples variables, como el patrón de brincos, análisis de números calientes y fríos, la pirámide y otros filtros matemáticos, para calcular las terminaciones con mayor probabilidad.</p>
+          <h3>Elige tu estrategia</h3>
+          <p>Calientes, Fríos, Más Jugados, Patrón Brinco o Jugó el Año Pasado. Tú decides cómo quieres que calculemos tus números.</p>
         </div>
         <div class="step-card">
           <span class="step-number">03</span>
-          <h3>Tus Números de la Suerte</h3>
-          <p>Recibe tu lista optimizada de 10 números clasificados con su respectivo puntaje de probabilidad matemática.</p>
+          <h3>Recibe tu lista optimizada</h3>
+          <p>Cada número llega con su puntaje de fuerza del 0 al 100. Tú decides cuáles jugar con más confianza.</p>
         </div>
+      </div>
+      
+      <div style="display: flex; justify-content: center; align-items: center; margin-top: 60px;">
+        <img src="https://i.ibb.co/8gBfqqQp/Chat-GPT-Image-29-may-2026-01-07-30-a-m.webp" alt="App LotteryX Predicciones" style="max-width: 100%; width: 400px; border-radius: 28px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1);">
       </div>
     </section>
 
     <!-- Características -->
     <section id="features">
       <div class="landing-section-title">
-        <h2>Analizador de Resultados LNB Panamá</h2>
-        <p>Herramientas poderosas diseñadas para maximizar tus probabilidades en cada sorteo.</p>
+        <h2>Todo lo que necesitas para jugar más inteligente</h2>
+        <p>Herramientas que antes solo usaban los que "siempre saben" qué jugar.</p>
       </div>
+      
+      <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 60px;">
+        <img src="https://i.ibb.co/5gFh5L0B/Chat-GPT-Image-28-may-2026-10-38-07-p-m.webp" alt="LotteryX Premium" style="max-width: 100%; width: 500px; border-radius: 28px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1);">
+      </div>
+
       <div class="features-grid-landing">
         <div class="feature-landing-card">
-          <div class="feature-icon-wrapper">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
+          <div class="feature-icon-wrapper">🔥</div>
           <div class="feature-landing-info">
-            <h3>Puntaje de Fuerza Estadística</h3>
-            <p>Calculamos un porcentaje de fuerza de 0 a 100 para cada número, basado en la frecuencia histórica de brincos, números calientes, fríos y otras variables estadísticas clave de los sorteos.</p>
+            <h3>Números Calientes</h3>
+            <p>Los que más han salido recientemente. Cuando una terminación está en racha, LotteryX la detecta primero.</p>
           </div>
         </div>
         <div class="feature-landing-card">
-          <div class="feature-icon-wrapper">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
-          </div>
+          <div class="feature-icon-wrapper">❄️</div>
           <div class="feature-landing-info">
-            <h3>Sincronización en Tiempo Real</h3>
-            <p>Los números cambian y se recalculan de inmediato tras publicarse los resultados de la Lotería de Panamá oficiales.</p>
+            <h3>Números Fríos</h3>
+            <p>Los más ausentes del historial reciente. Muchos jugadores los prefieren porque "ya les toca salir".</p>
           </div>
         </div>
         <div class="feature-landing-card">
-          <div class="feature-icon-wrapper">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-          </div>
+          <div class="feature-icon-wrapper">🏆</div>
           <div class="feature-landing-info">
-            <h3>Diseño Glassmorphic Veloz</h3>
-            <p>Accede de forma rápida y segura desde cualquier dispositivo en Panamá sin anuncios intrusivos ni virus.</p>
+            <h3>Más Jugados en 1er Premio</h3>
+            <p>Terminaciones que históricamente han caído más veces en el primer lugar. Estadística pura.</p>
           </div>
         </div>
         <div class="feature-landing-card">
-          <div class="feature-icon-wrapper">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
+          <div class="feature-icon-wrapper">🦘</div>
           <div class="feature-landing-info">
-            <h3>Buscador Histórico de Sorteos</h3>
-            <p>Consulta cualquier sorteo de fechas pasadas para validar patrones de juego o chequear tus billetes y chances.</p>
+            <h3>Patrón Brinco</h3>
+            <p>Números que saltaron de 2do o 3er premio a 1ro. Un patrón real que se repite en los sorteos de Panamá.</p>
+          </div>
+        </div>
+        <div class="feature-landing-card">
+          <div class="feature-icon-wrapper">📅</div>
+          <div class="feature-landing-info">
+            <h3>Jugó el Año Pasado</h3>
+            <p>Terminaciones que cayeron en este mismo sorteo el año anterior. La historia tiende a repetirse.</p>
+          </div>
+        </div>
+        <div class="feature-landing-card">
+          <div class="feature-icon-wrapper">⚡</div>
+          <div class="feature-landing-info">
+            <h3>Actualización en tiempo real</h3>
+            <p>En cuanto la LNB publica los resultados, el sistema recalcula. Siempre tienes los datos más frescos.</p>
+          </div>
+        </div>
+        <div class="feature-landing-card">
+          <div class="feature-icon-wrapper">🎫</div>
+          <div class="feature-landing-info">
+            <h3>Verificador de billetes</h3>
+            <p>Chequea si tu billete o chance ganó sin buscar en otra app. Todo en un solo lugar.</p>
+          </div>
+        </div>
+        <div class="feature-landing-card">
+          <div class="feature-icon-wrapper">🌙</div>
+          <div class="feature-landing-info">
+            <h3>Diccionario de sueños</h3>
+            <p>¿Soñaste algo y quieres saber qué número jugar? Consúltalo directo desde la app.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Premium Showcase -->
-    <section class="app-showcase" style="display: flex; justify-content: center; align-items: center; margin-bottom: 60px;">
-      <img src="https://i.ibb.co/5gFh5L0B/Chat-GPT-Image-28-may-2026-10-38-07-p-m.webp" alt="LotteryX App Pantalla Premium" style="max-width: 100%; width: 400px; border-radius: 28px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1);">
+    <!-- Testimonios -->
+    <section id="testimonials">
+      <div class="landing-section-title">
+        <h2>Más de 1,200 panameños ya juegan con ventaja</h2>
+        <p>Ellos no ganaron por suerte. Ganaron porque cambiaron cómo eligen sus números.</p>
+      </div>
+      
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img src="https://i.ibb.co/d03r2cqc/image.png" alt="Usuario Marisol" class="testimonial-img">
+            <div class="testimonial-info">
+              <h4>Marisol R., Ciudad de Panamá</h4>
+              <p>⭐⭐⭐⭐⭐</p>
+            </div>
+          </div>
+          <p class="testimonial-text">"Antes compraba números al azar y nunca pasaba nada. Con LotteryX llevo 3 semanas jugando con los números sugeridos y ya saqué dos premios pequeños. ¡Vale la pena!"</p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img src="https://i.ibb.co/LzvHQx4v/image.png" alt="Usuario Yolanda" class="testimonial-img">
+            <div class="testimonial-info">
+              <h4>Yolanda F., Colón</h4>
+              <p>⭐⭐⭐⭐⭐</p>
+            </div>
+          </div>
+          <p class="testimonial-text">"No soy experta en matemáticas, pero la app lo hace todo fácil. Elijo mi estrategia, veo los puntajes y escojo los más fuertes. Simple y efectivo."</p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img src="https://i.ibb.co/HT1BCdWQ/image.png" alt="Usuario Carlos" class="testimonial-img">
+            <div class="testimonial-info">
+              <h4>Carlos M., Santiago</h4>
+              <p>⭐⭐⭐⭐⭐</p>
+            </div>
+          </div>
+          <p class="testimonial-text">"Lo que más me gustó fue poder elegir la estrategia. Yo siempre he creído en el patrón brinco y ahora tengo los datos que lo respaldan."</p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img src="https://i.ibb.co/C3tBX5RJ/image.png" alt="Usuario Rodrigo" class="testimonial-img">
+            <div class="testimonial-info">
+              <h4>Rodrigo T., David, Chiriquí</h4>
+              <p>⭐⭐⭐⭐⭐</p>
+            </div>
+          </div>
+          <p class="testimonial-text">"Cubre el Miercolito, el Dominical, el Gordito y la Extraordinaria. Es la única app que necesito para todos los sorteos de la semana."</p>
+        </div>
+      </div>
     </section>
 
     <!-- CTA Section -->
     <section id="join-section" class="landing-cta-section glass-panel">
-      <div class="landing-cta-text">
-        <h2>Únete a la Comunidad de LotteryX</h2>
-        <p>Comienza con nuestra versión gratuita o elige Premium para consultar el listado completo con los mejores números de lotería de Panamá analizados por nuestra IA.</p>
-        <div class="landing-cta-benefits">
-          <div class="cta-benefit-item">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Acceso Gratuito a números y estadísticas básicas</span>
-          </div>
-          <div class="cta-benefit-item">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Resultados oficiales del Miercolito y Dominical de Panamá</span>
-          </div>
-          <div class="cta-benefit-item">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>Membresía Premium opcional para predicciones exclusivas</span>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="cta-button-container">
-          <a href="https://app.digitalboxstore.site/" class="btn-cta-main">Crear Cuenta e Iniciar Sesión</a>
-        </div>
-        <p class="cta-pricing-info">Empieza Gratis · Actualiza a Premium cuando quieras</p>
+      <h2>Empieza hoy. Es gratis.</h2>
+      <p>No necesitas saber de estadísticas. Solo entra, elige tu estrategia y deja que el algoritmo haga lo suyo.</p>
+      
+      <a href="https://app.digitalboxstore.site/" class="btn-primary-lg" style="margin-top: 10px;">Crear cuenta gratis</a>
+      <div class="cta-trust-text">
+        Sin tarjeta de crédito · Acceso inmediato · Todos los sorteos de la LNB
       </div>
     </section>
 
     <!-- FAQ -->
     <section id="faq">
       <div class="landing-section-title">
-        <h2>Preguntas Frecuentes sobre la Lotería de Panamá</h2>
-        <p>Resolvemos las dudas más frecuentes sobre nuestro sistema de predicción estadística.</p>
+        <h2>Preguntas que siempre nos hacen</h2>
       </div>
       <div class="faq-grid">
         <div class="faq-item">
-          <h3>¿Cómo funciona la predicción de LotteryX?</h3>
-          <p>Analizamos la base de datos de los sorteos jugados de la Lotería Nacional de Beneficencia de Panamá. El sistema busca terminaciones basadas en la teoría de brincos y aplica análisis de números calientes, fríos, pirámides y otros filtros estadísticos avanzados para optimizar las probabilidades de éxito en sorteos posteriores.</p>
+          <h3>¿Qué sorteos cubre LotteryX?</h3>
+          <p>Cubrimos los cuatro sorteos principales de la Lotería Nacional de Panamá: Miercolito (miércoles), Dominical (domingo), Gordito (viernes) y Extraordinaria (sorteos especiales). Todos actualizados en tiempo real.</p>
         </div>
         <div class="faq-item">
-          <h3>¿Qué estrategias estadísticas utiliza LotteryX?</h3>
-          <p>Implementamos múltiples algoritmos. Uno de los principales es el "patrón de brincos", pero además aplicamos análisis de números calientes (los que más salen), números fríos (rezagados), el cálculo de la pirámide y otros filtros de probabilidad acumulada para darte el mejor pronóstico.</p>
+          <h3>¿Qué significa cada estrategia?</h3>
+          <p>Calientes son los números con mayor frecuencia reciente. Fríos son los más ausentes. Más Jugados son los que más veces han caído en 1er premio. Patrón Brinco detecta números que saltaron de 2do/3ro a 1ro. Y Jugó el Año Pasado identifica terminaciones que cayeron en este mismo sorteo el año anterior.</p>
         </div>
         <div class="faq-item">
-          <h3>¿Tengo que pagar suscripciones para usar LotteryX?</h3>
-          <p>Puedes empezar totalmente gratis y tener acceso a estadísticas y sugerencias básicas para los sorteos. Si deseas potenciar tus oportunidades, ofrecemos una suscripción Premium que desbloquea nuestro análisis avanzado y el top de predicciones exclusivas.</p>
+          <h3>¿LotteryX me garantiza que voy a ganar?</h3>
+          <p>No — y cualquier app que te diga que sí, te está mintiendo. La lotería es azar. Lo que LotteryX hace es darte una ventaja estadística real frente a quien elige números sin información. Más estrategia, mejores probabilidades.</p>
         </div>
         <div class="faq-item">
-          <h3>¿El sistema garantiza que voy a ganar la Lotería de Panamá?</h3>
-          <p>No. La lotería es un juego de azar. LotteryX provee un análisis probabilístico e histórico que optimiza tus opciones frente a compras ciegas, pero no garantiza resultados ganadores del 100%. Debe usarse como una herramienta informativa y estadística.</p>
+          <h3>¿Cuándo se actualizan los números?</h3>
+          <p>Inmediatamente después de que la LNB publica los resultados oficiales. El sistema recalcula en tiempo real para que siempre tengas el análisis más fresco.</p>
+        </div>
+        <div class="faq-item">
+          <h3>¿Para qué sirve el verificador de billetes y el diccionario de sueños?</h3>
+          <p>El verificador te permite saber si tu billete o chance ganó sin salir de la app. El diccionario de sueños te sugiere números basados en lo que soñaste — una tradición muy popular en Panamá que quisimos incluir.</p>
         </div>
       </div>
     </section>
@@ -628,11 +658,12 @@
   <!-- Footer -->
   <footer class="landing-footer">
     <div class="landing-footer-container">
-      <p>&copy; 2026 LotteryX Panamá. Todos los derechos reservados. No afiliado oficialmente a la LNB.</p>
+      <h3>LotteryX — Juega con datos, no con fe ciega.</h3>
+      <p>&copy; 2026 LotteryX Panamá. No afiliado a la Lotería Nacional de Beneficencia. Uso responsable.</p>
       <div class="landing-footer-links">
-        <a href="https://lotteryx.digitalboxstore.site/terminos.html">Términos de Uso</a>
-        <a href="https://lotteryx.digitalboxstore.site/privacidad.html">Política de Privacidad</a>
-        <a href="https://lotteryx.digitalboxstore.site/contacto.html">Contacto de Soporte</a>
+        <a href="/terminos.html">Términos de Uso</a>
+        <a href="/privacidad.html">Política de Privacidad</a>
+        <a href="/contacto.html">Soporte</a>
       </div>
     </div>
   </footer>
