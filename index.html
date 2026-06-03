@@ -268,6 +268,13 @@
       line-height: 1.6;
     }
 
+    /* ===== PAIN POINTS ===== */
+    .pain-points-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
     /* ===== STEPS ===== */
     .steps-grid {
       display: grid;
@@ -376,6 +383,7 @@
       .landing-cta-section { padding: 40px 20px; }
       .features-grid-landing { grid-template-columns: 1fr; }
       .testimonials-grid { grid-template-columns: 1fr; }
+      .pain-points-grid { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 768px) {
@@ -465,23 +473,23 @@
         <h2 style="color: #ef4444;">¿Cansado de jugar por costumbre y no ganar?</h2>
         <p>Comprar billetes basándote solo en la "suerte" es la forma más rápida de frustrarte.</p>
       </div>
-      <div class="features-grid-landing" style="grid-template-columns: repeat(3, 1fr); gap: 24px;">
+      <div class="pain-points-grid">
         <div class="feature-landing-card" style="flex-direction: column; gap: 12px; background: rgba(239, 68, 68, 0.05); border-color: rgba(239, 68, 68, 0.2);">
-          <div class="feature-icon-wrapper" style="font-size: 24px;">💸</div>
+          <div class="feature-icon-wrapper" style="font-size: 24px; background: transparent; border: none;">💸</div>
           <div class="feature-landing-info">
             <h3 style="color: #f87171; font-size: 16px;">Juegas a ciegas</h3>
             <p>Compras números porque "son bonitos" o por fechas, sin saber si llevan 6 meses estancados en el fondo del historial.</p>
           </div>
         </div>
         <div class="feature-landing-card" style="flex-direction: column; gap: 12px; background: rgba(239, 68, 68, 0.05); border-color: rgba(239, 68, 68, 0.2);">
-          <div class="feature-icon-wrapper" style="font-size: 24px;">📰</div>
+          <div class="feature-icon-wrapper" style="font-size: 24px; background: transparent; border: none;">📰</div>
           <div class="feature-landing-info">
             <h3 style="color: #f87171; font-size: 16px;">Pirámides sin sentido</h3>
             <p>Te dan listas de números en el periódico o TV sin explicarte de dónde salen ni mostrarte la matemática que los respalda.</p>
           </div>
         </div>
         <div class="feature-landing-card" style="flex-direction: column; gap: 12px; background: rgba(239, 68, 68, 0.05); border-color: rgba(239, 68, 68, 0.2);">
-          <div class="feature-icon-wrapper" style="font-size: 24px;">📉</div>
+          <div class="feature-icon-wrapper" style="font-size: 24px; background: transparent; border: none;">📉</div>
           <div class="feature-landing-info">
             <h3 style="color: #f87171; font-size: 16px;">Sientes que botas el dinero</h3>
             <p>Pasan los domingos y los miércoles, compras y compras, pero la suerte parece que nunca se acuerda de ti.</p>
