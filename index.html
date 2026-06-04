@@ -439,6 +439,89 @@
       .blog-container { padding: 40px 0 80px; }
       .blog-img-wrapper { height: 200px; }
     }
+
+    /* ===== HOME LAYOUT STYLES ===== */
+    .home-hero {
+      text-align: center;
+      padding: 60px 20px 40px;
+    }
+    .home-hero h1 {
+      font-size: clamp(38px, 6vw, 64px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      background: linear-gradient(180deg, #ffffff 0%, #a3a3a3 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 16px;
+    }
+    .home-hero p {
+      font-size: clamp(16px, 2vw, 20px);
+      color: var(--text-muted);
+    }
+    .live-widget-section {
+      padding: 0 20px 60px;
+      display: flex;
+      justify-content: center;
+    }
+    .live-widget {
+      background: radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.08) 0%, rgba(5,5,5,0.8) 100%);
+      border: 1px solid rgba(16, 185, 129, 0.2);
+      text-align: center;
+      max-width: 600px;
+      padding: 40px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+    }
+    .live-widget h3 {
+      font-size: 24px;
+      color: #f87171;
+      margin-bottom: 12px;
+    }
+    .live-widget p {
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .btn-primary-lg {
+      display: inline-block;
+      background: var(--primary);
+      color: #000 !important;
+      padding: 16px 32px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .btn-primary-lg:hover { opacity: 0.9; transform: translateY(-2px); }
+    
+    .section-title {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .section-title::after {
+      content: '';
+      flex-grow: 1;
+      height: 1px;
+      background: var(--glass-border);
+    }
+    .featured-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 80px;
+    }
+    @media (max-width: 900px) {
+      .featured-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .featured-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -465,20 +548,48 @@
     </div>
   </header>
 
-  <div class="blog-container">
-    <div class="blog-header">
-      <span class="blog-badge">📰 Blog LotteryX</span>
-      <h1 id="dynamic-title">Resultados Recientes y Picks del Día</h1>
-      <p id="dynamic-desc">Lo último en sorteos, estadísticas y predicciones para jugar la <a href="https://www.lnb.gob.pa/" target="_blank" rel="noopener noreferrer">Lotería de Panamá</a> con inteligencia.</p>
+  <div class="blog-container" id="main-container">
+
+    <!-- LAYOUT DE INICIO -->
+    <div id="layout-inicio">
+      <section class="home-hero">
+         <h1>Domina la Lotería con Datos</h1>
+         <p>Análisis, estrategias y resultados para jugar con ventaja matemática.</p>
+      </section>
+      
+      <section class="live-widget-section">
+         <div class="live-widget">
+            <h3>🔴 Últimos Resultados</h3>
+            <p>Comprueba los números ganadores oficiales de la LNB y verifica tus billetes directamente en nuestra plataforma inteligente.</p>
+            <a href="/app/" class="btn-primary-lg">Ver Resultados en la App</a>
+         </div>
+      </section>
+
+      <section>
+         <h2 class="section-title">🌟 Artículos Destacados</h2>
+         <div class="featured-grid" id="featured-grid"></div>
+      </section>
+
+      <section style="margin-top: 20px;">
+         <h2 class="section-title">⏱️ Recién Publicados</h2>
+         <div class="blog-grid" id="recent-grid"></div>
+      </section>
     </div>
 
-    <div class="blog-grid" id="blog-grid">
-      <!-- Articles injected by JS -->
+    <!-- LAYOUT DE CATEGORIAS -->
+    <div id="layout-categoria" style="display: none;">
+      <div class="blog-header">
+        <span class="blog-badge" id="dynamic-badge">📰 Blog LotteryX</span>
+        <h1 id="dynamic-title">Historial de Resultados por Sorteo</h1>
+        <p id="dynamic-desc">Resultados del Miercolito, Dominical, Gordito y Extraordinaria.</p>
+      </div>
+
+      <div class="blog-grid" id="blog-grid">
+        <!-- Artículos generados dinámicamente -->
+      </div>
+      <div class="pagination" id="pagination"></div>
     </div>
 
-    <div class="pagination" id="pagination">
-      <!-- Pagination injected by JS -->
-    </div>
   </div>
 
   <footer class="landing-footer">
@@ -517,9 +628,12 @@
         // Dynamic Header
         const h1 = document.getElementById('dynamic-title');
         const p = document.getElementById('dynamic-desc');
+        const badge = document.getElementById('dynamic-badge');
+        
+        if(badge) badge.innerText = '📰 ' + currentCategory;
+
         if(currentCategory === 'Inicio') {
-          h1.innerText = 'Resultados Recientes y Picks del Día';
-          p.innerHTML = 'Lo último en sorteos, estadísticas y predicciones para jugar la <a href="https://www.lnb.gob.pa/" target="_blank" rel="noopener noreferrer">Lotería de Panamá</a> con inteligencia.';
+          // handled by layout display
         } else if(currentCategory === 'Resultados') {
           h1.innerText = 'Historial de Resultados por Sorteo';
           p.innerText = 'Resultados del Miercolito, Dominical, Gordito y Extraordinaria.';
@@ -646,34 +760,12 @@
     let currentPage = 1;
     let currentCategory = "Inicio";
 
-    function renderArticles() {
-      let filteredArticles = articles;
-      if (currentCategory !== "Inicio") {
-        filteredArticles = articles.filter(a => (a.category || "").includes(currentCategory));
-      }
-      
-      const start = (currentPage - 1) * ITEMS_PER_PAGE;
-      const end = start + ITEMS_PER_PAGE;
-      const visible = filteredArticles.slice(start, end);
-      const grid = document.getElementById('blog-grid');
-      grid.innerHTML = '';
-
-      if (visible.length === 0) {
-        grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:var(--text-muted);padding:60px 0;">No hay artículos en esta categoría aún.</p>';
-        renderPagination(filteredArticles.length);
-        return;
-      }
-
-      visible.forEach(function(article) {
-        const card = document.createElement('a');
-        card.href = article.url;
-        card.className = 'blog-card';
-
+    function createCardHTML(article) {
         const imgTag = article.image
           ? '<img src="' + article.image + '" alt="' + article.title + '" loading="lazy" onerror="this.style.display=\'none\';this.parentElement.querySelector(\'.blog-img-fallback\').style.display=\'flex\'">'
           : '';
 
-        card.innerHTML =
+        return '<a href="' + article.url + '" class="blog-card">' +
           '<div class="blog-img-wrapper">' +
             imgTag +
             '<div class="blog-img-fallback" style="display:' + (article.image ? 'none' : 'flex') + '">🎰</div>' +
@@ -686,12 +778,44 @@
             '<h2 class="blog-title">' + article.title + '</h2>' +
             '<p class="blog-excerpt">' + article.excerpt + '</p>' +
             '<span class="read-more">Leer artículo <span>→</span></span>' +
-          '</div>';
+          '</div></a>';
+    }
 
-        grid.appendChild(card);
-      });
+    function renderArticles() {
+      const layoutInicio = document.getElementById('layout-inicio');
+      const layoutCategoria = document.getElementById('layout-categoria');
 
-      renderPagination(filteredArticles.length);
+      if (currentCategory === "Inicio") {
+        layoutInicio.style.display = 'block';
+        layoutCategoria.style.display = 'none';
+
+        const featuredArticles = [articles[2], articles[9], articles[1]].filter(Boolean);
+        const featuredGrid = document.getElementById('featured-grid');
+        featuredGrid.innerHTML = featuredArticles.map(createCardHTML).join('');
+
+        const recentArticles = articles.filter(a => !featuredArticles.includes(a)).slice(0, 3);
+        const recentGrid = document.getElementById('recent-grid');
+        recentGrid.innerHTML = recentArticles.map(createCardHTML).join('');
+
+      } else {
+        layoutInicio.style.display = 'none';
+        layoutCategoria.style.display = 'block';
+
+        let filteredArticles = articles.filter(a => (a.category || "").includes(currentCategory));
+        const start = (currentPage - 1) * ITEMS_PER_PAGE;
+        const end = start + ITEMS_PER_PAGE;
+        const visible = filteredArticles.slice(start, end);
+        const grid = document.getElementById('blog-grid');
+        
+        if (visible.length === 0) {
+          grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:var(--text-muted);padding:60px 0;">No hay artículos en esta categoría aún.</p>';
+          renderPagination(filteredArticles.length);
+          return;
+        }
+
+        grid.innerHTML = visible.map(createCardHTML).join('');
+        renderPagination(filteredArticles.length);
+      }
     }
 
     function renderPagination(totalItems) {
