@@ -1,39 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://lotteryx.digitalboxstore.site/</loc>
-    <lastmod>2026-05-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://lotteryx.digitalboxstore.site/blog/</loc>
-    <lastmod>2026-05-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://lotteryx.digitalboxstore.site/blog/como-ganar-la-loteria-de-panama/</loc>
-    <lastmod>2026-05-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://lotteryx.digitalboxstore.site/terminos.html</loc>
-    <lastmod>2026-05-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://lotteryx.digitalboxstore.site/privacidad.html</loc>
-    <lastmod>2026-05-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://lotteryx.digitalboxstore.site/contacto.html</loc>
-    <lastmod>2026-05-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
+<url><loc>https://lotteryx.digitalboxstore.site/</loc><lastmod>2026-06-04</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+<url><loc>https://lotteryx.digitalboxstore.site/app/</loc><lastmod>2026-06-04</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<url><loc>https://lotteryx.digitalboxstore.site/blog/como-ganar-la-loteria-de-panama/</loc><lastmod>2026-06-04</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://lotteryx.digitalboxstore.site/blog/diccionario-de-suenos-loteria-panama/</loc><lastmod>2026-06-04</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://lotteryx.digitalboxstore.site/blog/numeros-calientes-y-frios-loteria-panama/</loc><lastmod>2026-06-04</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://lotteryx.digitalboxstore.site/blog/numeros-mas-jugados-junio-loteria-panama-2026/</loc><lastmod>2026-06-04</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://lotteryx.digitalboxstore.site/blog/piramide-loteria-hoy/</loc><lastmod>2026-06-04</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://lotteryx.digitalboxstore.site/blog/piramide-lotteryx-dominical-1-junio/</loc><lastmod>2026-06-04</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://lotteryx.digitalboxstore.site/blog/piramide-lotteryx-miercolito-3-junio/</loc><lastmod>2026-06-04</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://lotteryx.digitalboxstore.site/blog/que-es-el-gordito-del-zodiaco/</loc><lastmod>2026-06-04</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://lotteryx.digitalboxstore.site/blog/resultados-loteria-del-gordito/</loc><lastmod>2026-06-04</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://lotteryx.digitalboxstore.site/blog/resultados-miercolito-3-junio/</loc><lastmod>2026-06-04</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://lotteryx.digitalboxstore.site/terminos.html</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>
+<url><loc>https://lotteryx.digitalboxstore.site/privacidad.html</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>
+<url><loc>https://lotteryx.digitalboxstore.site/contacto.html</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
 </urlset>
