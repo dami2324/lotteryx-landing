@@ -454,12 +454,13 @@
         <span></span><span></span><span></span>
       </button>
       <nav class="landing-nav-links" id="nav-menu">
-        <a href="#" class="nav-link active" data-category="Todos">Todos</a>
+        <a href="#" class="nav-link active" data-category="Inicio">Inicio</a>
         <a href="#" class="nav-link" data-category="Resultados">Resultados</a>
+        <a href="#" class="nav-link" data-category="Predicciones">Predicciones</a>
+        <a href="#" class="nav-link" data-category="Sorteos">Sorteos</a>
         <a href="#" class="nav-link" data-category="Estadísticas">Estadísticas</a>
-        <a href="#" class="nav-link" data-category="Estrategia">Estrategia</a>
-        <a href="#" class="nav-link" data-category="Predicción">Predicción</a>
-        <a href="/app/" class="btn-nav-cta" rel="nofollow">Acceder a la App</a>
+        <a href="#" class="nav-link" data-category="Estrategias">Estrategias</a>
+        <a href="/app/" class="btn-nav-cta" rel="nofollow">LotteryX Pro</a>
       </nav>
     </div>
   </header>
@@ -467,8 +468,8 @@
   <div class="blog-container">
     <div class="blog-header">
       <span class="blog-badge">📰 Blog LotteryX</span>
-      <h1>Consejos y Estrategias para la Lotería</h1>
-      <p>Análisis estadísticos, guías y tips para jugar la <a href="https://www.lnb.gob.pa/" target="_blank" rel="noopener noreferrer">Lotería de Panamá</a> con inteligencia</p>
+      <h1 id="dynamic-title">Resultados Recientes y Picks del Día</h1>
+      <p id="dynamic-desc">Lo último en sorteos, estadísticas y predicciones para jugar la <a href="https://www.lnb.gob.pa/" target="_blank" rel="noopener noreferrer">Lotería de Panamá</a> con inteligencia.</p>
     </div>
 
     <div class="blog-grid" id="blog-grid">
@@ -512,6 +513,30 @@
         
         currentCategory = this.getAttribute('data-category');
         currentPage = 1;
+        
+        // Dynamic Header
+        const h1 = document.getElementById('dynamic-title');
+        const p = document.getElementById('dynamic-desc');
+        if(currentCategory === 'Inicio') {
+          h1.innerText = 'Resultados Recientes y Picks del Día';
+          p.innerHTML = 'Lo último en sorteos, estadísticas y predicciones para jugar la <a href="https://www.lnb.gob.pa/" target="_blank" rel="noopener noreferrer">Lotería de Panamá</a> con inteligencia.';
+        } else if(currentCategory === 'Resultados') {
+          h1.innerText = 'Historial de Resultados por Sorteo';
+          p.innerText = 'Resultados del Miercolito, Dominical, Gordito y Extraordinaria.';
+        } else if(currentCategory === 'Predicciones') {
+          h1.innerText = 'Predicciones y Picks de la Semana';
+          p.innerText = 'Análisis estadístico y recomendaciones directas de nuestra tecnología.';
+        } else if(currentCategory === 'Sorteos') {
+          h1.innerText = 'Guía de Sorteos Oficiales';
+          p.innerText = 'Cómo funciona cada sorteo, cuándo es, cómo se juega y qué premios tiene.';
+        } else if(currentCategory === 'Estadísticas') {
+          h1.innerText = 'Análisis y Estadísticas Históricas';
+          p.innerText = 'Números más frecuentes, rachas y análisis matemático de la LNB.';
+        } else if(currentCategory === 'Estrategias') {
+          h1.innerText = 'Estrategias para Jugar Mejor';
+          p.innerText = 'Aprende qué son los números calientes, fríos, patrón brinco y optimiza tus chances.';
+        }
+        
         renderArticles();
       });
     });
@@ -529,7 +554,7 @@
         url: "/blog/resultados-miercolito-3-junio/",
         excerpt: "El primer premio del Miercolito del 3 de junio de 2026 fue el 5770, chance 70. Verifica tu billete y descubre cómo cobrar tu premio.",
         date: "3 Jun 2026",
-        category: "Resultados Oficiales",
+        category: "Resultados",
         image: "https://i.ibb.co/VYhPzDRf/Chat-GPT-Image-3-jun-2026-03-43-08-p-m.webp"
       },
       {
@@ -537,7 +562,7 @@
         url: "/blog/numeros-mas-jugados-junio-loteria-panama-2026/",
         excerpt: "¿Qué números han caído más en junio en la lotería de Panamá? Billetes y chances reales de junio 2025. Dominical, Miercolito y Gordito. Todo simple y claro.",
         date: "2 Jun 2026",
-        category: "Estadísticas e Historial",
+        category: "Estadísticas",
         image: "https://i.ibb.co/6cg7CXzP/Chat-GPT-Image-2-jun-2026-11-07-04-p-m.webp"
       },
       {
@@ -545,7 +570,7 @@
         url: "/blog/piramide-lotteryx-miercolito-3-junio/",
         excerpt: "La app LotteryX generó 3 estrategias estadísticas para el Miercolito del 3 de junio 2026: Patrón Brinco, Más Jugados y Calientes. Descubre los candidatos.",
         date: "1 Jun 2026",
-        category: "Estrategia",
+        category: "Predicciones",
         image: "https://i.ibb.co/3yYWnmw5/Chat-GPT-Image-1-jun-2026-07-33-34-p-m.webp"
       },
       {
@@ -553,7 +578,7 @@
         url: "/blog/diccionario-de-suenos-loteria-panama/",
         excerpt: "Descubre qué número jugar en la lotería de Panamá según lo que soñaste. 50 sueños con su número, organizados por categoría.",
         date: "30 May 2026",
-        category: "Tradición Lúdica",
+        category: "Estrategias",
         image: "https://i.ibb.co/twfPvRwz/Chat-GPT-Image-30-may-2026-01-07-20-p-m.webp"
       },
       {
@@ -561,7 +586,7 @@
         url: "/blog/piramide-lotteryx-dominical-1-junio/",
         excerpt: "La Pirámide LotteryX analiza los 5 últimos dominicales de mayo 2026 con estadística pura. Dígitos calientes por posición, terminales fríos y números candidatos.",
         date: "30 May 2026",
-        category: "Predicción",
+        category: "Predicciones",
         image: "https://i.ibb.co/213MVmSd/Chat-GPT-Image-30-may-2026-01-17-55-p-m.webp"
       },
       {
@@ -569,7 +594,7 @@
         url: "/blog/resultados-loteria-del-gordito/",
         excerpt: "Conoce los resultados oficiales del Gordito del Zodiaco Tauro del 29 de mayo de 2026. Primer premio, segundo, tercero, letras, serie y folio.",
         date: "29 May 2026",
-        category: "Resultados LNB",
+        category: "Resultados",
         image: "https://i.ibb.co/8n9Sf1S3/Chat-GPT-Image-30-may-2026-02-23-33-a-m.webp"
       },
       {
@@ -577,7 +602,7 @@
         url: "/blog/que-es-el-gordito-del-zodiaco/",
         excerpt: "Prepárate para el Gordito del Zodiaco con el análisis estadístico, pirámide y números calientes para este 29 de mayo de 2026.",
         date: "28 May 2026",
-        category: "Sorteos Especiales LNB",
+        category: "Sorteos",
         image: "https://i.ibb.co/Xx7sLSd8/portada.webp"
       },
       {
@@ -585,7 +610,7 @@
         url: "/blog/piramide-loteria-hoy/",
         excerpt: "Descubre cómo funciona la Pirámide de la Lotería de hoy y aprende a analizar números y tendencias para mejorar tus probabilidades.",
         date: "27 May 2026",
-        category: "Estadisticas",
+        category: "Predicciones",
         image: "https://lotteryx.digitalboxstore.site/og-image.png"
       },
       {
@@ -593,7 +618,7 @@
         url: "/blog/numeros-calientes-y-frios-loteria-panama/",
         excerpt: "Descubre la diferencia entre números calientes y fríos y cómo usar la estadística para tus billetes y chances en Panamá.",
         date: "23 May 2026",
-        category: "Estadísticas",
+        category: "Estrategias",
         image: "https://images.unsplash.com/photo-1518183214770-9cffbec72538?w=600&q=80"
       },
       {
@@ -601,7 +626,7 @@
         url: "/blog/como-ganar-la-loteria-de-panama/",
         excerpt: "Descubre cómo la matemática y el análisis estadístico de los resultados históricos de la Lotería Nacional pueden darte una ventaja real.",
         date: "20 May 2026",
-        category: "Estrategia",
+        category: "Estrategias",
         image: "https://i.ibb.co/PvYVGtGZ/Chat-GPT-Image-21-may-2026-03-15-06-a-m.webp"
       }
       /*
@@ -619,11 +644,11 @@
 
     const ITEMS_PER_PAGE = 6;
     let currentPage = 1;
-    let currentCategory = "Todos";
+    let currentCategory = "Inicio";
 
     function renderArticles() {
       let filteredArticles = articles;
-      if (currentCategory !== "Todos") {
+      if (currentCategory !== "Inicio") {
         filteredArticles = articles.filter(a => (a.category || "").includes(currentCategory));
       }
       
