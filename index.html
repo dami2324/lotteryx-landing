@@ -11,27 +11,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO BÁSICO Y POSICIONAMIENTO EN GOOGLE PANAMÁ -->
-  <title>LotteryX | Tecnología estadística para la Lotería de Panamá</title>
-  <meta name="description" content="Deja de jugar a ciegas. LotteryX analiza el historial completo de sorteos de la LNB para entregarte los 10 números con mayor fuerza matemática.">
-  <meta name="keywords" content="loteria panama, resultados loteria panama, piramide de la loteria, pronosticos loteria panama, numeros ganadores lnb, sorteo miercolito, sorteo dominical, numeros para jugar loteria panama">
+  <title>Blog LotteryX | Consejos y Estrategias para la Lotería de Panamá</title>
+  <meta name="description" content="Artículos, consejos y análisis estadísticos sobre la Lotería Nacional de Beneficencia de Panamá. Aprende a usar patrones de brincos para mejorar tus probabilidades.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://lotteryx.digitalboxstore.site/">
 
   <!-- OPEN GRAPH -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="LotteryX | Juega con datos, no con fe ciega">
-  <meta property="og:description" content="Elige tu estrategia y recibe los números con mayor fuerza matemática para el próximo sorteo de la Lotería de Panamá.">
-  <meta property="og:url" content="https://lotteryx.digitalboxstore.site/">
-  <meta property="og:image" content="https://i.ibb.co/8gBfqqQp/Chat-GPT-Image-29-may-2026-01-07-30-a-m.webp">
+  <meta property="og:title" content="Blog LotteryX | Lotería de Panamá">
+  <meta property="og:description" content="Consejos, análisis y estrategias para la Lotería Nacional de Beneficencia de Panamá.">
+  <meta property="og:url" content="https://lotteryx.digitalboxstore.site/blog/">
   <meta property="og:locale" content="es_PA">
 
-  <!-- TWITTER CARDS -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="LotteryX | Tecnología estadística para la LNB Panamá">
-  <meta name="twitter:description" content="Deja de jugar a ciegas. LotteryX analiza el historial completo de sorteos de la LNB para entregarte los mejores números.">
-
-  <!-- Google Fonts: Inter -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -50,7 +42,12 @@
       --accent: #6366f1;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
 
     body {
       background: var(--bg-base);
@@ -114,6 +111,7 @@
     }
 
     .landing-nav-links a:hover { color: var(--text-main); }
+    .landing-nav-links a.active { color: var(--primary); }
 
     .btn-nav-cta {
       background: var(--primary);
@@ -124,7 +122,10 @@
       transition: transform 0.2s ease, opacity 0.2s ease;
     }
 
-    .btn-nav-cta:hover { opacity: 0.9; transform: translateY(-1px); }
+    .btn-nav-cta:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
 
     /* ===== HAMBURGER ===== */
     .hamburger {
@@ -152,27 +153,21 @@
     .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
     .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-    /* ===== MAIN CONTAINER ===== */
-    .landing-container {
+    /* ===== BLOG LAYOUT ===== */
+    .blog-container {
       width: min(1000px, 90%);
       margin: 0 auto;
-      padding: 80px 0;
-      display: flex;
-      flex-direction: column;
-      gap: 120px;
+      padding: 60px 0 100px;
+      min-height: 60vh;
     }
 
-    /* ===== HERO ===== */
-    .landing-hero {
+    .blog-header {
       text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 28px;
-      padding-top: 40px;
+      margin-bottom: 60px;
     }
 
-    .landing-badge {
+    .blog-badge {
+      display: inline-block;
       background: rgba(16, 185, 129, 0.1);
       border: 1px solid rgba(16, 185, 129, 0.2);
       color: var(--primary);
@@ -182,208 +177,218 @@
       font-weight: 600;
       letter-spacing: 1px;
       text-transform: uppercase;
+      margin-bottom: 20px;
     }
 
-    .landing-hero h1 {
-      font-size: clamp(38px, 6vw, 64px);
+    .blog-header h1 {
+      font-size: clamp(32px, 5vw, 48px);
       font-weight: 800;
-      line-height: 1.1;
-      letter-spacing: -0.03em;
+      letter-spacing: -0.02em;
       background: linear-gradient(180deg, #ffffff 0%, #a3a3a3 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      margin-bottom: 12px;
     }
 
-    .landing-hero p {
-      font-size: clamp(16px, 2.2vw, 21px);
+    .blog-header p {
       color: var(--text-muted);
-      max-width: 720px;
-      line-height: 1.6;
+      font-size: 18px;
     }
 
-    .landing-hero-actions {
-      display: flex;
-      gap: 20px;
-      margin-top: 12px;
-    }
-
-    .btn-primary-lg {
-      background: var(--primary);
-      color: #000;
-      padding: 18px 36px;
-      border-radius: 14px;
-      font-size: 17px;
-      font-weight: 700;
-      text-decoration: none;
-      box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3);
-      transition: transform 0.2s ease, opacity 0.2s ease;
-    }
-
-    .btn-primary-lg:hover { opacity: 0.95; transform: translateY(-2px); }
-
-    .btn-secondary-lg {
-      background: transparent;
-      color: var(--text-main);
-      border: 1px solid var(--glass-border);
-      padding: 18px 36px;
-      border-radius: 14px;
-      font-size: 17px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-
-    .btn-secondary-lg:hover { background: rgba(255, 255, 255, 0.03); transform: translateY(-2px); }
-
-    .glass-panel {
-      background: var(--glass-bg);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid var(--glass-border);
-      border-radius: 28px;
-      box-shadow: var(--glass-shadow);
-      padding: 40px;
-      transition: transform 0.3s ease, border-color 0.3s ease;
-    }
-
-    .landing-section-title {
-      text-align: center;
-      margin-bottom: 60px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .landing-section-title h2 {
-      font-size: clamp(30px, 4.5vw, 42px);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-
-    .landing-section-title p {
-      color: var(--text-muted);
-      font-size: 17px;
-      max-width: 600px;
-      line-height: 1.6;
-    }
-
-    /* ===== PAIN POINTS ===== */
-    .pain-points-grid {
+    /* ===== BLOG GRID ===== */
+    .blog-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      gap: 28px;
     }
 
-    /* ===== STEPS ===== */
-    .steps-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 40px;
-    }
-
-    .step-card { position: relative; display: flex; flex-direction: column; gap: 20px; }
-    .step-number { font-size: 56px; font-weight: 800; color: rgba(16, 185, 129, 0.15); line-height: 1; }
-    .step-card h3 { font-size: 22px; font-weight: 600; }
-    .step-card p { color: var(--text-muted); line-height: 1.6; font-size: 16px; }
-
-    /* ===== FEATURES ===== */
-    .features-grid-landing {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 32px;
-    }
-
-    .feature-landing-card { display: flex; gap: 20px; background: var(--glass-bg); padding: 24px; border-radius: 20px; border: 1px solid var(--glass-border); align-items: flex-start;}
-
-    .feature-icon-wrapper {
-      font-size: 28px;
-      flex-shrink: 0;
-    }
-
-    .feature-landing-info h3 { font-size: 18px; font-weight: 600; margin-bottom: 8px; color: var(--text-main); }
-    .feature-landing-info p { color: var(--text-muted); font-size: 14px; line-height: 1.5; }
-
-    /* ===== TESTIMONIALS ===== */
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 32px;
-    }
-
-    .testimonial-card {
+    .blog-card {
       background: var(--glass-bg);
       border: 1px solid var(--glass-border);
       border-radius: 20px;
-      padding: 32px;
+      overflow: hidden;
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      text-decoration: none;
+      color: inherit;
     }
 
-    .testimonial-header {
+    .blog-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(16, 185, 129, 0.35);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .blog-img-wrapper {
+      width: 100%;
+      height: 190px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #0f2027, #1a3a2a);
       display: flex;
       align-items: center;
-      gap: 16px;
+      justify-content: center;
+      flex-shrink: 0;
     }
 
-    .testimonial-img {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
+    .blog-img-wrapper img {
+      width: 100%;
+      height: 100%;
       object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
     }
 
-    .testimonial-info h4 { font-size: 16px; font-weight: 600; margin-bottom: 4px;}
-    .testimonial-info p { color: var(--primary); font-size: 13px; font-weight: 500;}
-    .testimonial-text { font-style: italic; color: var(--text-muted); font-size: 15px; line-height: 1.6; }
+    .blog-card:hover .blog-img-wrapper img {
+      transform: scale(1.05);
+    }
 
-    /* ===== CTA ===== */
-    .landing-cta-section {
-      text-align: center;
+    /* Fallback icon when image fails */
+    .blog-img-fallback {
+      font-size: 48px;
+      opacity: 0.4;
+    }
+
+    .blog-content {
+      padding: 24px;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      gap: 32px;
-      background: radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.08) 0%, transparent 80%);
+      flex-grow: 1;
     }
 
-    .landing-cta-section h2 { font-size: clamp(32px, 5vw, 44px); font-weight: 700; line-height: 1.15; }
-    .landing-cta-section p { color: var(--text-muted); font-size: 18px; line-height: 1.6; max-width: 600px;}
-    
-    .cta-trust-text { color: var(--text-muted); font-size: 14px; font-weight: 500; letter-spacing: 0.5px;}
+    .blog-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
 
-    /* ===== FAQ ===== */
-    .faq-grid { display: flex; flex-direction: column; gap: 32px; max-width: 800px; margin: 0 auto; width: 100%; }
-    .faq-item { border-bottom: 1px solid var(--glass-border); padding-bottom: 32px; }
-    .faq-item h3 { font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--primary); }
-    .faq-item p { color: var(--text-muted); font-size: 15px; line-height: 1.6; }
+    .blog-date {
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .blog-category {
+      background: rgba(99, 102, 241, 0.12);
+      border: 1px solid rgba(99, 102, 241, 0.2);
+      color: #818cf8;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 6px;
+    }
+
+    .blog-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      line-height: 1.4;
+      color: var(--text-main);
+    }
+
+    .blog-excerpt {
+      color: var(--text-muted);
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 14px;
+      transition: gap 0.2s ease;
+    }
+
+    .blog-card:hover .read-more { gap: 10px; }
+
+    /* ===== PAGINATION ===== */
+    .pagination {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 70px;
+      align-items: center;
+    }
+
+    .page-btn {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      color: var(--text-main);
+      min-width: 42px;
+      height: 42px;
+      padding: 0 8px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 15px;
+      font-family: 'Inter', sans-serif;
+      transition: all 0.2s ease;
+    }
+
+    .page-btn:hover:not(:disabled) {
+      background: rgba(16, 185, 129, 0.1);
+      border-color: rgba(16, 185, 129, 0.4);
+      color: var(--primary);
+    }
+
+    .page-btn.active {
+      background: var(--primary);
+      color: #000;
+      border-color: var(--primary);
+      font-weight: 700;
+    }
+
+    .page-btn:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
 
     /* ===== FOOTER ===== */
-    .landing-footer { border-top: 1px solid var(--glass-border); padding: 60px 0; margin-top: 80px; }
+    .landing-footer {
+      border-top: 1px solid var(--glass-border);
+      padding: 60px 0;
+      margin-top: 40px;
+    }
 
     .landing-footer-container {
       width: min(1000px, 90%);
       margin: 0 auto;
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
       align-items: center;
-      gap: 20px;
+      flex-wrap: wrap;
+      gap: 32px;
       color: var(--text-muted);
-      font-size: 14px;
-      text-align: center;
+      font-size: 15px;
     }
 
-    .landing-footer-links { display: flex; gap: 24px; }
-    .landing-footer-links a { color: var(--text-muted); text-decoration: none; transition: color 0.2s ease; }
+    .landing-footer-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .landing-footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
     .landing-footer-links a:hover { color: var(--text-main); }
 
     /* ===== RESPONSIVE ===== */
     @media (max-width: 900px) {
-      .landing-cta-section { padding: 40px 20px; }
-      .features-grid-landing { grid-template-columns: 1fr; }
-      .testimonials-grid { grid-template-columns: 1fr; }
-      .pain-points-grid { grid-template-columns: 1fr; }
+      .blog-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 768px) {
@@ -420,12 +425,19 @@
         border-radius: 14px;
       }
 
-      /* Content */
-      .landing-container { padding: 60px 0; gap: 80px; }
-      .steps-grid { grid-template-columns: 1fr; gap: 40px; }
+      .landing-header-container {
+        flex-direction: row;
+        gap: 16px;
+      }
 
-      .landing-hero-actions { flex-direction: column; width: 100%; }
-      .btn-primary-lg, .btn-secondary-lg { width: 100%; text-align: center; padding: 16px 24px; }
+      .landing-footer-container { flex-direction: column; text-align: center; }
+      .landing-footer-links { flex-wrap: wrap; justify-content: center; }
+    }
+
+    @media (max-width: 580px) {
+      .blog-grid { grid-template-columns: 1fr; }
+      .blog-container { padding: 40px 0 80px; }
+      .blog-img-wrapper { height: 200px; }
     }
   </style>
 </head>
@@ -437,275 +449,44 @@
 
   <header class="landing-header">
     <div class="landing-header-container">
-      <a href="#" class="landing-logo">Lottery<span>X</span></a>
+      <a href="/" class="landing-logo">Lottery<span>X</span></a>
       <button class="hamburger" id="hamburger" aria-label="Abrir menú">
         <span></span><span></span><span></span>
       </button>
       <nav class="landing-nav-links" id="nav-menu">
-        <a href="#how-it-works" class="nav-link">Cómo Funciona</a>
-        <a href="#features" class="nav-link">Beneficios</a>
-        <a href="#testimonials" class="nav-link">Testimonios</a>
-        <a href="#faq" class="nav-link">FAQ</a>
-        <a href="/blog/" class="nav-link">Blog</a>
-        <a href="https://app.digitalboxstore.site/" class="btn-nav-cta" rel="nofollow">Acceder a la App</a>
+        <a href="#" class="nav-link active" data-category="Todos">Todos</a>
+        <a href="#" class="nav-link" data-category="Resultados">Resultados</a>
+        <a href="#" class="nav-link" data-category="Estadísticas">Estadísticas</a>
+        <a href="#" class="nav-link" data-category="Estrategia">Estrategia</a>
+        <a href="#" class="nav-link" data-category="Predicción">Predicción</a>
+        <a href="/app/" class="btn-nav-cta" rel="nofollow">Acceder a la App</a>
       </nav>
     </div>
   </header>
 
-  <div class="landing-container">
+  <div class="blog-container">
+    <div class="blog-header">
+      <span class="blog-badge">📰 Blog LotteryX</span>
+      <h1>Consejos y Estrategias para la Lotería</h1>
+      <p>Análisis estadísticos, guías y tips para jugar la <a href="https://www.lnb.gob.pa/" target="_blank" rel="noopener noreferrer">Lotería de Panamá</a> con inteligencia</p>
+    </div>
 
-    <!-- Hero Section -->
-    <section class="landing-hero">
-      <span class="landing-badge">Tecnología estadística para la Lotería de Panamá</span>
-      <h1>Deja de jugar a ciegas. Empieza a jugar con datos.</h1>
-      <p>
-        LotteryX analiza el historial completo de sorteos de la LNB para entregarte los 10 números con mayor fuerza matemática — tú eliges la estrategia. Gratis para empezar.
-      </p>
-      <div class="landing-hero-actions">
-        <a href="https://app.digitalboxstore.site/" class="btn-primary-lg">Obtener mis números ahora</a>
-        <a href="#how-it-works" class="btn-secondary-lg">Ver cómo funciona</a>
-      </div>
-    </section>
+    <div class="blog-grid" id="blog-grid">
+      <!-- Articles injected by JS -->
+    </div>
 
-    <!-- Sección de Dolor / Problema -->
-    <section id="pain-points" class="glass-panel" style="padding: 60px 40px; margin-top: 20px;">
-      <div class="landing-section-title" style="margin-bottom: 40px;">
-        <h2 style="color: #ef4444;">¿Cansado de jugar por costumbre y no ganar?</h2>
-        <p>Comprar billetes basándote solo en la "suerte" es la forma más rápida de frustrarte.</p>
-      </div>
-      <div class="pain-points-grid">
-        <div class="feature-landing-card" style="flex-direction: column; gap: 12px; background: rgba(239, 68, 68, 0.05); border-color: rgba(239, 68, 68, 0.2);">
-          <div class="feature-icon-wrapper" style="font-size: 24px; background: transparent; border: none;">💸</div>
-          <div class="feature-landing-info">
-            <h3 style="color: #f87171; font-size: 16px;">Juegas a ciegas</h3>
-            <p>Compras números porque "son bonitos" o por fechas, sin saber si llevan 6 meses estancados en el fondo del historial.</p>
-          </div>
-        </div>
-        <div class="feature-landing-card" style="flex-direction: column; gap: 12px; background: rgba(239, 68, 68, 0.05); border-color: rgba(239, 68, 68, 0.2);">
-          <div class="feature-icon-wrapper" style="font-size: 24px; background: transparent; border: none;">📰</div>
-          <div class="feature-landing-info">
-            <h3 style="color: #f87171; font-size: 16px;">Pirámides sin sentido</h3>
-            <p>Te dan listas de números en el periódico o TV sin explicarte de dónde salen ni mostrarte la matemática que los respalda.</p>
-          </div>
-        </div>
-        <div class="feature-landing-card" style="flex-direction: column; gap: 12px; background: rgba(239, 68, 68, 0.05); border-color: rgba(239, 68, 68, 0.2);">
-          <div class="feature-icon-wrapper" style="font-size: 24px; background: transparent; border: none;">📉</div>
-          <div class="feature-landing-info">
-            <h3 style="color: #f87171; font-size: 16px;">Sientes que botas el dinero</h3>
-            <p>Pasan los domingos y los miércoles, compras y compras, pero la suerte parece que nunca se acuerda de ti.</p>
-          </div>
-        </div>
-      </div>
-      <div style="text-align: center; margin-top: 40px;">
-        <h3 style="font-size: 22px; font-weight: 700; color: var(--primary);">La buena noticia: Hay una forma más inteligente de jugar. 👇</h3>
-      </div>
-    </section>
-
-    <!-- Cómo Funciona (La Solución) -->
-    <section id="how-it-works">
-      <div class="landing-section-title">
-        <h2>Tus números inteligentes en menos de 60 segundos</h2>
-        <p>Sin fórmulas complicadas. Solo entra, elige tu estrategia y juega con ventaja.</p>
-      </div>
-      <div class="steps-grid">
-        <div class="step-card">
-          <span class="step-number">01</span>
-          <h3>Escoge tu sorteo</h3>
-          <p>Miercolito, Dominical, Gordito o Extraordinaria — LotteryX cubre todos los sorteos de la LNB.</p>
-        </div>
-        <div class="step-card">
-          <span class="step-number">02</span>
-          <h3>Elige tu estrategia</h3>
-          <p>Calientes, Fríos, Más Jugados, Patrón Brinco o Jugó el Año Pasado. Tú decides cómo quieres que calculemos tus números.</p>
-        </div>
-        <div class="step-card">
-          <span class="step-number">03</span>
-          <h3>Recibe tu lista optimizada</h3>
-          <p>Cada número llega con su puntaje de fuerza del 0 al 100. Tú decides cuáles jugar con más confianza.</p>
-        </div>
-      </div>
-      
-      <div style="display: flex; justify-content: center; align-items: center; margin-top: 60px;">
-        <img src="https://i.ibb.co/8gBfqqQp/Chat-GPT-Image-29-may-2026-01-07-30-a-m.webp" alt="App LotteryX Predicciones" style="max-width: 100%; width: 400px; border-radius: 28px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1);">
-      </div>
-    </section>
-
-    <!-- Características -->
-    <section id="features">
-      <div class="landing-section-title">
-        <h2>Todo lo que necesitas para jugar más inteligente</h2>
-        <p>Herramientas que antes solo usaban los que "siempre saben" qué jugar.</p>
-      </div>
-      
-      <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 60px;">
-        <img src="https://i.ibb.co/5gFh5L0B/Chat-GPT-Image-28-may-2026-10-38-07-p-m.webp" alt="LotteryX Premium" style="max-width: 100%; width: 500px; border-radius: 28px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1);">
-      </div>
-
-      <div class="features-grid-landing">
-        <div class="feature-landing-card">
-          <div class="feature-icon-wrapper">🔥</div>
-          <div class="feature-landing-info">
-            <h3>Números Calientes</h3>
-            <p>Los que más han salido recientemente. Cuando una terminación está en racha, LotteryX la detecta primero.</p>
-          </div>
-        </div>
-        <div class="feature-landing-card">
-          <div class="feature-icon-wrapper">❄️</div>
-          <div class="feature-landing-info">
-            <h3>Números Fríos</h3>
-            <p>Los más ausentes del historial reciente. Muchos jugadores los prefieren porque "ya les toca salir".</p>
-          </div>
-        </div>
-        <div class="feature-landing-card">
-          <div class="feature-icon-wrapper">🏆</div>
-          <div class="feature-landing-info">
-            <h3>Más Jugados en 1er Premio</h3>
-            <p>Terminaciones que históricamente han caído más veces en el primer lugar. Estadística pura.</p>
-          </div>
-        </div>
-        <div class="feature-landing-card">
-          <div class="feature-icon-wrapper">🦘</div>
-          <div class="feature-landing-info">
-            <h3>Patrón Brinco</h3>
-            <p>Números que saltaron de 2do o 3er premio a 1ro. Un patrón real que se repite en los sorteos de Panamá.</p>
-          </div>
-        </div>
-        <div class="feature-landing-card">
-          <div class="feature-icon-wrapper">📅</div>
-          <div class="feature-landing-info">
-            <h3>Jugó el Año Pasado</h3>
-            <p>Terminaciones que cayeron en este mismo sorteo el año anterior. La historia tiende a repetirse.</p>
-          </div>
-        </div>
-        <div class="feature-landing-card">
-          <div class="feature-icon-wrapper">⚡</div>
-          <div class="feature-landing-info">
-            <h3>Actualización en tiempo real</h3>
-            <p>En cuanto la LNB publica los resultados, el sistema recalcula. Siempre tienes los datos más frescos.</p>
-          </div>
-        </div>
-        <div class="feature-landing-card">
-          <div class="feature-icon-wrapper">🎫</div>
-          <div class="feature-landing-info">
-            <h3>Verificador de billetes</h3>
-            <p>Chequea si tu billete o chance ganó sin buscar en otra app. Todo en un solo lugar.</p>
-          </div>
-        </div>
-        <div class="feature-landing-card">
-          <div class="feature-icon-wrapper">🌙</div>
-          <div class="feature-landing-info">
-            <h3>Diccionario de sueños</h3>
-            <p>¿Soñaste algo y quieres saber qué número jugar? Consúltalo directo desde la app.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonios -->
-    <section id="testimonials">
-      <div class="landing-section-title">
-        <h2>Más de 1,200 panameños ya juegan con ventaja</h2>
-        <p>Ellos no ganaron por suerte. Ganaron porque cambiaron cómo eligen sus números.</p>
-      </div>
-      
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="testimonial-header">
-            <img src="https://i.ibb.co/d03r2cqc/image.png" alt="Usuario Marisol" class="testimonial-img">
-            <div class="testimonial-info">
-              <h4>Marisol R., Ciudad de Panamá</h4>
-              <p>⭐⭐⭐⭐⭐</p>
-            </div>
-          </div>
-          <p class="testimonial-text">"Antes compraba números al azar y nunca pasaba nada. Con LotteryX llevo 3 semanas jugando con los números sugeridos y ya saqué dos premios pequeños. ¡Vale la pena!"</p>
-        </div>
-
-        <div class="testimonial-card">
-          <div class="testimonial-header">
-            <img src="https://i.ibb.co/LzvHQx4v/image.png" alt="Usuario Yolanda" class="testimonial-img">
-            <div class="testimonial-info">
-              <h4>Yolanda F., Colón</h4>
-              <p>⭐⭐⭐⭐⭐</p>
-            </div>
-          </div>
-          <p class="testimonial-text">"No soy experta en matemáticas, pero la app lo hace todo fácil. Elijo mi estrategia, veo los puntajes y escojo los más fuertes. Simple y efectivo."</p>
-        </div>
-
-        <div class="testimonial-card">
-          <div class="testimonial-header">
-            <img src="https://i.ibb.co/HT1BCdWQ/image.png" alt="Usuario Carlos" class="testimonial-img">
-            <div class="testimonial-info">
-              <h4>Carlos M., Santiago</h4>
-              <p>⭐⭐⭐⭐⭐</p>
-            </div>
-          </div>
-          <p class="testimonial-text">"Lo que más me gustó fue poder elegir la estrategia. Yo siempre he creído en el patrón brinco y ahora tengo los datos que lo respaldan."</p>
-        </div>
-
-        <div class="testimonial-card">
-          <div class="testimonial-header">
-            <img src="https://i.ibb.co/C3tBX5RJ/image.png" alt="Usuario Rodrigo" class="testimonial-img">
-            <div class="testimonial-info">
-              <h4>Rodrigo T., David, Chiriquí</h4>
-              <p>⭐⭐⭐⭐⭐</p>
-            </div>
-          </div>
-          <p class="testimonial-text">"Cubre el Miercolito, el Dominical, el Gordito y la Extraordinaria. Es la única app que necesito para todos los sorteos de la semana."</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section id="join-section" class="landing-cta-section glass-panel">
-      <h2>Empieza hoy. Es gratis.</h2>
-      <p>No necesitas saber de estadísticas. Solo entra, elige tu estrategia y deja que el algoritmo haga lo suyo.</p>
-      
-      <a href="https://app.digitalboxstore.site/" class="btn-primary-lg" style="margin-top: 10px;">Crear cuenta gratis</a>
-      <div class="cta-trust-text">
-        Sin tarjeta de crédito · Acceso inmediato · Todos los sorteos de la LNB
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq">
-      <div class="landing-section-title">
-        <h2>Preguntas que siempre nos hacen</h2>
-      </div>
-      <div class="faq-grid">
-        <div class="faq-item">
-          <h3>¿Qué sorteos cubre LotteryX?</h3>
-          <p>Cubrimos los cuatro sorteos principales de la Lotería Nacional de Panamá: Miercolito (miércoles), Dominical (domingo), Gordito (viernes) y Extraordinaria (sorteos especiales). Todos actualizados en tiempo real.</p>
-        </div>
-        <div class="faq-item">
-          <h3>¿Qué significa cada estrategia?</h3>
-          <p>Calientes son los números con mayor frecuencia reciente. Fríos son los más ausentes. Más Jugados son los que más veces han caído en 1er premio. Patrón Brinco detecta números que saltaron de 2do/3ro a 1ro. Y Jugó el Año Pasado identifica terminaciones que cayeron en este mismo sorteo el año anterior.</p>
-        </div>
-        <div class="faq-item">
-          <h3>¿LotteryX me garantiza que voy a ganar?</h3>
-          <p>No — y cualquier app que te diga que sí, te está mintiendo. La lotería es azar. Lo que LotteryX hace es darte una ventaja estadística real frente a quien elige números sin información. Más estrategia, mejores probabilidades.</p>
-        </div>
-        <div class="faq-item">
-          <h3>¿Cuándo se actualizan los números?</h3>
-          <p>Inmediatamente después de que la LNB publica los resultados oficiales. El sistema recalcula en tiempo real para que siempre tengas el análisis más fresco.</p>
-        </div>
-        <div class="faq-item">
-          <h3>¿Para qué sirve el verificador de billetes y el diccionario de sueños?</h3>
-          <p>El verificador te permite saber si tu billete o chance ganó sin salir de la app. El diccionario de sueños te sugiere números basados en lo que soñaste — una tradición muy popular en Panamá que quisimos incluir.</p>
-        </div>
-      </div>
-    </section>
-
+    <div class="pagination" id="pagination">
+      <!-- Pagination injected by JS -->
+    </div>
   </div>
 
-  <!-- Footer -->
   <footer class="landing-footer">
     <div class="landing-footer-container">
-      <h3>LotteryX — Juega con datos, no con fe ciega.</h3>
-      <p>&copy; 2026 LotteryX Panamá. No afiliado a la Lotería Nacional de Beneficencia. Uso responsable.</p>
+      <p>&copy; 2026 LotteryX Panamá. Todos los derechos reservados. No afiliado oficialmente a la LNB.</p>
       <div class="landing-footer-links">
-        <a href="/terminos.html">Términos de Uso</a>
-        <a href="/privacidad.html">Política de Privacidad</a>
-        <a href="/contacto.html">Soporte</a>
+        <a href="https://lotteryx.digitalboxstore.site/terminos.html">Términos de Uso</a>
+        <a href="https://lotteryx.digitalboxstore.site/privacidad.html">Política de Privacidad</a>
+        <a href="https://lotteryx.digitalboxstore.site/contacto.html">Contacto de Soporte</a>
       </div>
     </div>
   </footer>
@@ -721,12 +502,205 @@
     });
 
     navMenu.querySelectorAll('.nav-link').forEach(function(link) {
-      link.addEventListener('click', function() {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
         hamburger.classList.remove('open');
         navMenu.classList.remove('open');
+        
+        navMenu.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+        
+        currentCategory = this.getAttribute('data-category');
+        currentPage = 1;
+        renderArticles();
       });
     });
-  </script>
 
+    /*
+    =====================================================
+      LISTA DE ARTÍCULOS DEL BLOG
+      Para agregar un artículo nuevo, copia el bloque
+      de ejemplo y pégalo al inicio del array.
+    =====================================================
+    */
+    const articles = [
+      {
+        title: "Resultado del Miercolito de Hoy 3 de Junio 2026 — Números Ganadores de la Lotería de Panamá",
+        url: "/blog/resultados-miercolito-3-junio/",
+        excerpt: "El primer premio del Miercolito del 3 de junio de 2026 fue el 5770, chance 70. Verifica tu billete y descubre cómo cobrar tu premio.",
+        date: "3 Jun 2026",
+        category: "Resultados Oficiales",
+        image: "https://i.ibb.co/VYhPzDRf/Chat-GPT-Image-3-jun-2026-03-43-08-p-m.webp"
+      },
+      {
+        title: "Los Números Más Jugados de Junio en la Lotería de Panamá 2026",
+        url: "/blog/numeros-mas-jugados-junio-loteria-panama-2026/",
+        excerpt: "¿Qué números han caído más en junio en la lotería de Panamá? Billetes y chances reales de junio 2025. Dominical, Miercolito y Gordito. Todo simple y claro.",
+        date: "2 Jun 2026",
+        category: "Estadísticas e Historial",
+        image: "https://i.ibb.co/6cg7CXzP/Chat-GPT-Image-2-jun-2026-11-07-04-p-m.webp"
+      },
+      {
+        title: "Pirámide LotteryX para el Miercolito del 3 de Junio 2026 — 3 Estrategias con Datos Reales",
+        url: "/blog/piramide-lotteryx-miercolito-3-junio/",
+        excerpt: "La app LotteryX generó 3 estrategias estadísticas para el Miercolito del 3 de junio 2026: Patrón Brinco, Más Jugados y Calientes. Descubre los candidatos.",
+        date: "1 Jun 2026",
+        category: "Estrategia",
+        image: "https://i.ibb.co/3yYWnmw5/Chat-GPT-Image-1-jun-2026-07-33-34-p-m.webp"
+      },
+      {
+        title: "Diccionario de Sueños Lotería Panamá 2026: ¿Qué Número Jugar Según lo que Soñaste?",
+        url: "/blog/diccionario-de-suenos-loteria-panama/",
+        excerpt: "Descubre qué número jugar en la lotería de Panamá según lo que soñaste. 50 sueños con su número, organizados por categoría.",
+        date: "30 May 2026",
+        category: "Tradición Lúdica",
+        image: "https://i.ibb.co/twfPvRwz/Chat-GPT-Image-30-may-2026-01-07-20-p-m.webp"
+      },
+      {
+        title: "Pirámide LotteryX para el Sorteo Dominical del 1 de Junio 2026 — Predicción Estadística",
+        url: "/blog/piramide-lotteryx-dominical-1-junio/",
+        excerpt: "La Pirámide LotteryX analiza los 5 últimos dominicales de mayo 2026 con estadística pura. Dígitos calientes por posición, terminales fríos y números candidatos.",
+        date: "30 May 2026",
+        category: "Predicción",
+        image: "https://i.ibb.co/213MVmSd/Chat-GPT-Image-30-may-2026-01-17-55-p-m.webp"
+      },
+      {
+        title: "Resultados Lotería Panamá Hoy 29 Mayo 2026 | Gordito Zodiaco Tauro",
+        url: "/blog/resultados-loteria-del-gordito/",
+        excerpt: "Conoce los resultados oficiales del Gordito del Zodiaco Tauro del 29 de mayo de 2026. Primer premio, segundo, tercero, letras, serie y folio.",
+        date: "29 May 2026",
+        category: "Resultados LNB",
+        image: "https://i.ibb.co/8n9Sf1S3/Chat-GPT-Image-30-may-2026-02-23-33-a-m.webp"
+      },
+      {
+        title: "¿Qué es el Gordito del Zodiaco y Por Qué el 29 de Mayo es Especial?",
+        url: "/blog/que-es-el-gordito-del-zodiaco/",
+        excerpt: "Prepárate para el Gordito del Zodiaco con el análisis estadístico, pirámide y números calientes para este 29 de mayo de 2026.",
+        date: "28 May 2026",
+        category: "Sorteos Especiales LNB",
+        image: "https://i.ibb.co/Xx7sLSd8/portada.webp"
+      },
+      {
+        title: "Pirámide de la Lotería de Hoy: Análisis y Consejos",
+        url: "/blog/piramide-loteria-hoy/",
+        excerpt: "Descubre cómo funciona la Pirámide de la Lotería de hoy y aprende a analizar números y tendencias para mejorar tus probabilidades.",
+        date: "27 May 2026",
+        category: "Estadisticas",
+        image: "https://lotteryx.digitalboxstore.site/og-image.png"
+      },
+      {
+        title: "Números Calientes y Fríos en la Lotería de Panamá: ¿Mito o Estrategia?",
+        url: "/blog/numeros-calientes-y-frios-loteria-panama/",
+        excerpt: "Descubre la diferencia entre números calientes y fríos y cómo usar la estadística para tus billetes y chances en Panamá.",
+        date: "23 May 2026",
+        category: "Estadísticas",
+        image: "https://images.unsplash.com/photo-1518183214770-9cffbec72538?w=600&q=80"
+      },
+      {
+        title: "Cómo ganar la lotería de Panamá usando patrones de brincos",
+        url: "/blog/como-ganar-la-loteria-de-panama/",
+        excerpt: "Descubre cómo la matemática y el análisis estadístico de los resultados históricos de la Lotería Nacional pueden darte una ventaja real.",
+        date: "20 May 2026",
+        category: "Estrategia",
+        image: "https://i.ibb.co/PvYVGtGZ/Chat-GPT-Image-21-may-2026-03-15-06-a-m.webp"
+      }
+      /*
+      PLANTILLA — Copia esto y agrega una coma al final del artículo anterior:
+      ,{
+        title: "Título de tu nuevo artículo",
+        url: "/blog/tu-enlace-aqui/",
+        excerpt: "Escribe aquí un resumen corto de 1 a 2 oraciones sobre el artículo.",
+        date: "21 May 2026",
+        category: "Análisis",
+        image: "URL de la imagen del artículo"
+      }
+      */
+    ];
+
+    const ITEMS_PER_PAGE = 6;
+    let currentPage = 1;
+    let currentCategory = "Todos";
+
+    function renderArticles() {
+      let filteredArticles = articles;
+      if (currentCategory !== "Todos") {
+        filteredArticles = articles.filter(a => (a.category || "").includes(currentCategory));
+      }
+      
+      const start = (currentPage - 1) * ITEMS_PER_PAGE;
+      const end = start + ITEMS_PER_PAGE;
+      const visible = filteredArticles.slice(start, end);
+      const grid = document.getElementById('blog-grid');
+      grid.innerHTML = '';
+
+      if (visible.length === 0) {
+        grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:var(--text-muted);padding:60px 0;">No hay artículos en esta categoría aún.</p>';
+        renderPagination(filteredArticles.length);
+        return;
+      }
+
+      visible.forEach(function(article) {
+        const card = document.createElement('a');
+        card.href = article.url;
+        card.className = 'blog-card';
+
+        const imgTag = article.image
+          ? '<img src="' + article.image + '" alt="' + article.title + '" loading="lazy" onerror="this.style.display=\'none\';this.parentElement.querySelector(\'.blog-img-fallback\').style.display=\'flex\'">'
+          : '';
+
+        card.innerHTML =
+          '<div class="blog-img-wrapper">' +
+            imgTag +
+            '<div class="blog-img-fallback" style="display:' + (article.image ? 'none' : 'flex') + '">🎰</div>' +
+          '</div>' +
+          '<div class="blog-content">' +
+            '<div class="blog-meta">' +
+              '<span class="blog-date">' + article.date + '</span>' +
+              '<span class="blog-category">' + (article.category || 'Blog') + '</span>' +
+            '</div>' +
+            '<h2 class="blog-title">' + article.title + '</h2>' +
+            '<p class="blog-excerpt">' + article.excerpt + '</p>' +
+            '<span class="read-more">Leer artículo <span>→</span></span>' +
+          '</div>';
+
+        grid.appendChild(card);
+      });
+
+      renderPagination(filteredArticles.length);
+    }
+
+    function renderPagination(totalItems) {
+      const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
+      const pagination = document.getElementById('pagination');
+      pagination.innerHTML = '';
+      if (totalPages <= 1) return;
+
+      var prevBtn = document.createElement('button');
+      prevBtn.className = 'page-btn';
+      prevBtn.innerHTML = '←';
+      prevBtn.disabled = (currentPage === 1);
+      prevBtn.onclick = function() { currentPage--; renderArticles(); window.scrollTo({top: 0, behavior: 'smooth'}); };
+      pagination.appendChild(prevBtn);
+
+      for (var i = 1; i <= totalPages; i++) {
+        (function(page) {
+          var btn = document.createElement('button');
+          btn.className = 'page-btn' + (page === currentPage ? ' active' : '');
+          btn.innerText = page;
+          btn.onclick = function() { currentPage = page; renderArticles(); window.scrollTo({top: 0, behavior: 'smooth'}); };
+          pagination.appendChild(btn);
+        })(i);
+      }
+
+      var nextBtn = document.createElement('button');
+      nextBtn.className = 'page-btn';
+      nextBtn.innerHTML = '→';
+      nextBtn.disabled = (currentPage === totalPages);
+      nextBtn.onclick = function() { currentPage++; renderArticles(); window.scrollTo({top: 0, behavior: 'smooth'}); };
+      pagination.appendChild(nextBtn);
+    }
+
+    document.addEventListener('DOMContentLoaded', renderArticles);
+  </script>
 </body>
 </html>
