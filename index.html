@@ -106,23 +106,22 @@
     .section-label::after { content:''; flex-grow:1; height:1px; background: var(--glass-border); }
     .section-label .label-icon { font-size: 20px; }
 
-    /* ===== SEARCH BAR ===== */
-    .blog-search-wrapper {
-      max-width: 560px; margin: 28px auto 0; position: relative;
+    /* ===== HEADER SEARCH BAR ===== */
+    .header-search-wrapper {
+      position: relative; margin-right: 12px; display: flex; align-items: center;
     }
-    .blog-search-wrapper svg {
-      position: absolute; left: 18px; top: 50%; transform: translateY(-50%);
-      width: 20px; height: 20px; color: var(--text-muted); pointer-events: none; transition: color 0.2s;
+    .header-search-wrapper svg {
+      position: absolute; left: 10px; width: 16px; height: 16px; color: var(--text-muted); pointer-events: none;
     }
-    .blog-search {
-      width: 100%; padding: 14px 18px 14px 50px; border-radius: 14px;
-      border: 1px solid var(--glass-border); background: var(--glass-bg);
-      color: var(--text-main); font-family: 'Inter', sans-serif; font-size: 15px; outline: none;
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    .header-search {
+      width: 180px; padding: 8px 12px 8px 34px; border-radius: 8px;
+      border: 1px solid var(--glass-border); background: rgba(255,255,255,0.04);
+      color: var(--text-main); font-family: 'Inter', sans-serif; font-size: 13px; outline: none;
+      transition: all 0.3s ease;
     }
-    .blog-search::placeholder { color: var(--text-muted); }
-    .blog-search:focus { border-color: rgba(16, 185, 129, 0.5); box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1); }
-    .blog-search:focus + svg, .blog-search-wrapper:focus-within svg { color: var(--primary); }
+    .header-search::placeholder { color: var(--text-muted); }
+    .header-search:focus { width: 240px; border-color: var(--primary); background: rgba(255,255,255,0.08); }
+    
     .search-no-results { text-align: center; color: var(--text-muted); padding: 60px 0; font-size: 17px; grid-column: 1 / -1; }
     .search-no-results span { display: block; font-size: 40px; margin-bottom: 12px; }
 
@@ -429,6 +428,10 @@
         <span></span><span></span><span></span>
       </button>
       <nav class="main-nav" id="main-nav">
+        <div class="header-search-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" /></svg>
+          <input type="text" class="header-search" id="blog-search" placeholder="Buscar artículos..." autocomplete="off">
+        </div>
         <a href="#" class="nav-link active" data-category="Inicio">Inicio</a>
         <a href="#" class="nav-link" data-category="Resultados">Resultados</a>
         <a href="#" class="nav-link" data-category="Predicciones">Predicciones</a>
@@ -659,10 +662,6 @@
         <div class="cat-page-badge" id="cat-badge">📰 Blog LotteryX</div>
         <h1 id="cat-title">Artículos</h1>
         <p id="cat-desc">Explora todos nuestros artículos.</p>
-        <div class="blog-search-wrapper" id="search-container">
-          <input type="text" class="blog-search" id="blog-search" placeholder="Buscar artículos..." autocomplete="off">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" /></svg>
-        </div>
       </div>
       <div class="blog-grid" id="blog-grid"></div>
       <div class="pagination" id="pagination"></div>
@@ -908,7 +907,7 @@
       document.getElementById('cat-desc').innerText  = m.desc;
 
       let filtered = articles;
-      if (currentCategory !== 'Inicio') {
+      if (currentCategory !== 'Inicio' && currentCategory !== 'Todas') {
         filtered = filtered.filter(a => a.category === currentCategory);
       }
       
@@ -961,9 +960,12 @@
     function switchTo(cat) {
       currentCategory = cat;
       currentPage = 1;
-      searchQuery = '';
-      const searchInput = document.getElementById('blog-search');
-      if (searchInput) searchInput.value = '';
+      
+      if (cat !== 'Todas') {
+        searchQuery = '';
+        const searchInput = document.getElementById('blog-search');
+        if (searchInput) searchInput.value = '';
+      }
 
       document.querySelectorAll('.nav-link').forEach(l => {
         l.classList.toggle('active', l.dataset.category === cat);
@@ -1005,6 +1007,17 @@
     document.getElementById('blog-search')?.addEventListener('input', function(e) {
       searchQuery = e.target.value.trim();
       currentPage = 1;
+      
+      if (searchQuery && currentCategory === 'Inicio') {
+        currentCategory = 'Todas';
+        document.getElementById('layout-inicio').style.display = 'none';
+        document.getElementById('layout-categoria').style.display = 'block';
+        document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+      } else if (!searchQuery && currentCategory === 'Todas') {
+        switchTo('Inicio');
+        return;
+      }
+      
       renderCategory();
     });
 
