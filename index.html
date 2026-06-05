@@ -106,6 +106,26 @@
     .section-label::after { content:''; flex-grow:1; height:1px; background: var(--glass-border); }
     .section-label .label-icon { font-size: 20px; }
 
+    /* ===== SEARCH BAR ===== */
+    .blog-search-wrapper {
+      max-width: 560px; margin: 28px auto 0; position: relative;
+    }
+    .blog-search-wrapper svg {
+      position: absolute; left: 18px; top: 50%; transform: translateY(-50%);
+      width: 20px; height: 20px; color: var(--text-muted); pointer-events: none; transition: color 0.2s;
+    }
+    .blog-search {
+      width: 100%; padding: 14px 18px 14px 50px; border-radius: 14px;
+      border: 1px solid var(--glass-border); background: var(--glass-bg);
+      color: var(--text-main); font-family: 'Inter', sans-serif; font-size: 15px; outline: none;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .blog-search::placeholder { color: var(--text-muted); }
+    .blog-search:focus { border-color: rgba(16, 185, 129, 0.5); box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1); }
+    .blog-search:focus + svg, .blog-search-wrapper:focus-within svg { color: var(--primary); }
+    .search-no-results { text-align: center; color: var(--text-muted); padding: 60px 0; font-size: 17px; grid-column: 1 / -1; }
+    .search-no-results span { display: block; font-size: 40px; margin-bottom: 12px; }
+
     /* ===== 1. HERO ===== */
     .hero-section {
       padding: 80px 0 60px;
@@ -639,6 +659,10 @@
         <div class="cat-page-badge" id="cat-badge">📰 Blog LotteryX</div>
         <h1 id="cat-title">Artículos</h1>
         <p id="cat-desc">Explora todos nuestros artículos.</p>
+        <div class="blog-search-wrapper" id="search-container">
+          <input type="text" class="blog-search" id="blog-search" placeholder="Buscar artículos..." autocomplete="off">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" /></svg>
+        </div>
       </div>
       <div class="blog-grid" id="blog-grid"></div>
       <div class="pagination" id="pagination"></div>
@@ -697,6 +721,13 @@
        Categorías: Resultados | Predicciones | Sorteos | Estadísticas | Estrategias
     =================================================== */
     const articles = [
+      {
+        title: "¿Cuánto Paga el Chance en la Lotería de Panamá? (Premios y Letras 2026)",
+        url: "/blog/cuanto-paga-el-chance-loteria-panama/",
+        excerpt: "Descubre exactamente cuánto paga el chance hoy. Conoce los premios por fracción, incentivos por letras altas/bajas y cómo cobrar tu dinero.",
+        date: "5 Jun 2026", category: "Resultados",
+        image: "/images/chance_tickets_hands_1780626650338.png"
+      },
       {
         title: "Resultado del Miercolito de Hoy 3 de Junio 2026 — Números Ganadores de la Lotería de Panamá",
         url: "/blog/resultados-miercolito-3-junio/",
@@ -793,6 +824,7 @@
     const ITEMS_PER_PAGE = 6;
     let currentPage = 1;
     let currentCategory = 'Inicio';
+    let searchQuery = '';
 
     function createCard(article) {
       const img = article.image
@@ -875,13 +907,31 @@
       document.getElementById('cat-title').innerText = m.title;
       document.getElementById('cat-desc').innerText  = m.desc;
 
-      const filtered = articles.filter(a => a.category === currentCategory);
+      let filtered = articles;
+      if (currentCategory !== 'Inicio') {
+        filtered = filtered.filter(a => a.category === currentCategory);
+      }
+      
+      if (searchQuery) {
+        const q = searchQuery.toLowerCase();
+        filtered = filtered.filter(a => 
+          a.title.toLowerCase().includes(q) || 
+          a.excerpt.toLowerCase().includes(q) || 
+          (a.category && a.category.toLowerCase().includes(q))
+        );
+      }
+
       const start = (currentPage-1)*ITEMS_PER_PAGE;
       const visible = filtered.slice(start, start+ITEMS_PER_PAGE);
       const grid = document.getElementById('blog-grid');
-      grid.innerHTML = visible.length
-        ? visible.map(createCard).join('')
-        : '<p style="grid-column:1/-1;text-align:center;color:var(--text-muted);padding:60px 0;">No hay artículos en esta categoría aún.</p>';
+      
+      if (visible.length) {
+        grid.innerHTML = visible.map(createCard).join('');
+      } else {
+        grid.innerHTML = searchQuery 
+          ? `<div class="search-no-results"><span>🔍</span>No se encontraron artículos para "${searchQuery}".</div>` 
+          : '<div class="search-no-results"><span>📰</span>No hay artículos en esta categoría aún.</div>';
+      }
 
       renderPagination(filtered.length);
     }
@@ -911,6 +961,10 @@
     function switchTo(cat) {
       currentCategory = cat;
       currentPage = 1;
+      searchQuery = '';
+      const searchInput = document.getElementById('blog-search');
+      if (searchInput) searchInput.value = '';
+
       document.querySelectorAll('.nav-link').forEach(l => {
         l.classList.toggle('active', l.dataset.category === cat);
       });
@@ -946,6 +1000,13 @@
       document.getElementById('newsletter-form').style.display='none';
       document.getElementById('newsletter-success').style.display='block';
     }
+
+    /* ===== SEARCH EVENT ===== */
+    document.getElementById('blog-search')?.addEventListener('input', function(e) {
+      searchQuery = e.target.value.trim();
+      currentPage = 1;
+      renderCategory();
+    });
 
     /* ===== INIT ===== */
     document.addEventListener('DOMContentLoaded', renderHome);
