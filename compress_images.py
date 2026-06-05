@@ -10,12 +10,12 @@ def convert_to_webp(folder_path):
         try:
             # We only want to convert the ones we generated (they have a timestamp at the end)
             filename = os.path.basename(png_path)
-            if not filename.startswith("billete_panama_strip") and \
-               not filename.startswith("fraction_vs_strip") and \
-               not filename.startswith("hand_placing_strip") and \
-               not filename.startswith("payment_agency_window") and \
-               not filename.startswith("payout_table_screen") and \
-               not filename.startswith("series_folio_pointer"):
+            if not filename.startswith("chance_tickets_hands") and \
+               not filename.startswith("lottery_drawing_machine") and \
+               not filename.startswith("stacks_of_cash") and \
+               not filename.startswith("ticket_letters") and \
+               not filename.startswith("split_screen_vendor") and \
+               not filename.startswith("bank_teller_tickets"):
                 continue
 
             img = Image.open(png_path)
